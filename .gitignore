@@ -68,3 +68,4 @@ __jestResults__.json
 test-results.xml
 
 .cache/
+public/
