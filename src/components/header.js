@@ -1,6 +1,10 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {Text} from 'react-native';
+import * as jss from 'react-jss'
+
+console.log(jss)
 
 const Header = ({ siteTitle }) => (
   <header
@@ -27,6 +31,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <Text>Text</Text>
     </div>
   </header>
 )

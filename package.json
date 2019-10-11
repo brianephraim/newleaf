@@ -7,6 +7,8 @@
   "dependencies": {
     "gatsby": "^2.15.29",
     "gatsby-image": "^2.2.24",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-jss": "^2.1.9",
     "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-offline": "^3.0.11",
     "gatsby-plugin-react-helmet": "^3.1.10",
@@ -16,7 +18,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-jss": "^10.0.0",
+    "react-markdown": "^4.2.2",
+    "react-native-markdown-package": "^1.5.3",
+    "react-native-markdown-renderer": "^3.2.8",
+    "react-native-web": "^0.11.7"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
@@ -28,7 +35,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --port 8001",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

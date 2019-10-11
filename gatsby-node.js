@@ -5,3 +5,12 @@
  */
 
 // You can delete this file if you're not using it
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        'react-native$': 'react-native-web'
+      },
+    },
+  })
+}
