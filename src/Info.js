@@ -15,6 +15,8 @@ const styles = {
   container: {
     fontFamily: bodyFontName,
     flexShrink: 1,
+    color:'white',
+    margin: 20,
   },
   loud: {
     // fontWeight:'bold',
@@ -25,10 +27,17 @@ const styles = {
     // width:'80%'
   },
   header: {
-    color:'black',
     marginTop:20,
     fontFamily: 'Sansita One',
+    color: 'black',
+    marginTop:60,
   },
+
+  shiftUp: {
+    marginTop:-200
+  },
+
+
   afterHero: {
     marginLeft:20,
     marginRight:20,
@@ -41,7 +50,7 @@ const styles = {
   },
   bodyText: {
     flexGrow: 1,
-    
+
     display:'flex',
     flexDirection:'column',
     padding: 20,
@@ -68,46 +77,40 @@ const styles = {
     justifyContent:'space-evenly',
   },
   bold:{fontWeight:'bold'},
-  insideHero: {
-    marginTop:-200,    
-    // width:'50%',
-    
-  },
 };
 
-styles['@media (min-width: 1024px)'] = {
-  container: {
-    color: 'white'
-  }
-};
+// styles['@media (min-width: 1024px)'] = {
+//   container: {
+//     // color: 'white'
+//   }
+// };
 
 const targetBlank = () => '_blank';
 
 const Info = (props) => {
-  const {copy,classes, heroSrc, beside, className, bodyTextClassName, below} = props;
+  const {copy,classes, className, bodyTextClassName, content, children = null } = props;
+  let {header} = props;
   console.log('bodyTextClassName',bodyTextClassName);
-  const {header,body} = copyDict[copy];
-  if (bodyTextClassName === 'loud'){
-
+  const {body} = copyDict[copy] || {};
+  if (!header && copy){
+    header = copyDict[copy].header;
   }
   return (
     <div className={[classes.container,classes[className]].join(' ')}>
-      {heroSrc && <img src={heroSrc} />}
-      <div className={[classes.afterHero,beside && classes.afterHeroWithBeside].join(' ')}>
-        {header && <h2 className={[classes.header].join(' ')}>{header}</h2>}
-        <div className={[classes.bodyWrap].join(' ')}>
-          <div>
-            <Markdown
-              linkTarget={targetBlank}
-              className={[classes.bodyText,heroSrc && classes.insideHero, classes[bodyTextClassName]].join(' ')}
-            >
-              {body}
-            </Markdown>
-            {below}
-          </div>
-          {beside}
+      {header && <h2 className={[classes.header].join(' ')}>{header}</h2>}
+      {children && (
+        <div className={[classes.bodyText,classes[bodyTextClassName]].join(' ')}>
+          {children}
         </div>
-      </div>
+      )}
+      {copy && (
+        <Markdown
+          linkTarget={targetBlank}
+          className={[classes.bodyText,classes[bodyTextClassName]].join(' ')}
+        >
+          {body}
+        </Markdown>
+      )}
     </div>
   );
 };

@@ -10,6 +10,7 @@ import {
 
 const styles = {
   container: {
+    margin: 20,
     padding:20,
     fontFamily: headerFontName,
     border: `10px solid rgba(255,255,255,.25)`,
@@ -29,6 +30,10 @@ const styles = {
       textDecoration: 'none',
       fontWeight:'normal'
     },
+
+  },
+  img: {
+    width:'100%',
   },
 };
 
@@ -44,7 +49,7 @@ const Thumbnail = (props) => {
 
     >
       {headline && <h2>{headline}</h2>}
-      <img src={src}  />
+      <img src={src} className={classes.img}  />
     </a>
   );
 };

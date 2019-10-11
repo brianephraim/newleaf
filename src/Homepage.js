@@ -1,15 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "./components/layout"
 // import Image from "../components/image"
 import SEO from "./components/seo"
 // import {GoogleEarthImage} from "../components/image"
-import {Image,Text,Linking} from 'react-native';
+import {Image,Text} from 'react-native';
 import Markdown from 'react-markdown';
 import copy from './copy';
 import Info from './Info';
 import Thumbnail from './Thumbnail';
+import './reset.css';
+import injectSheet from 'react-jss';
+import SubscribeForm from './SubscribeForm';
 
 const copyX = `
 [google](https://www.google.com)
@@ -49,83 +51,88 @@ governance
 team
 outro
 */
-const IndexPage = () => (
-  <Layout>
-    <Info
-      copy="intro"
-      heroSrc='/images/widePhoto.jpg'
-      beside={<Info copy="steering" />}
-      below={
-        <Thumbnail
-          headline="Click here to view the site plan"
-          src="/images/siteplan.jpg"
-          href="/images/siteplan.jpg"
-          openInNewTab
-        />
-        }
-    />
-    
-    <Info
-      copy="gardenAspects"
-      beside={
-        <Info
-          copy="eradication"
-          className="loud"
-        />
-      }
-    />
-    <img src="/images/googleEarth.jpg" />
-    <img src="/images/siteplan.jpg" />
-    <Info copy="discussionsWithRec" />
-    <Info copy="governance" />
-    <Info copy="team" />
-    <Info copy="outro" />
-    <Markdown
-      linkTarget={targetBlank}
-    >
-      {copy.intro.body}
-    </Markdown>
-    <Markdown
-      linkTarget={targetBlank}
-    >
-      {copy.steering.body}
-    </Markdown>
-    <Markdown
-      linkTarget={targetBlank}
-    >
-      {copy.gardenAspects.body}
-    </Markdown>
-    <SEO title="Home" />
-    <Text style={{color: 'blue'}}
-      accessibilityRole="link"
-      href='http://google.com'
-      target="_blank"
-    >
-      Google!
-    </Text>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image
-          style={{width: 50, height: 50}}
-          source={{uri: '/images/widePhoto.jpg'}}
-        />
-      <Image
-          style={{width: 50, height: 50}}
-          source={{uri: '/images/googleEarth.jpg'}}
-        />
-      <Image
-          style={{width: 50, height: 50}}
-          source={{uri: '/images/siteplan.jpg'}}
-        />
-      <Page />
-      
 
+const styles={
+  headerLogo: {
+    alignSelf:"stretch",
+    margin:80,
+  },
+  container: {
+    display:'flex',
+    flexDirection:'column',
 
+  },
+  afterHero: {},
+  columns: {
+    display:'flex',
+    flexDirection:'row',
+  },
+  column: {
+    width:'50%',
+  },
+  hero: {
+    width:'100%',
+  },
+
+};
+
+class Input extends React.Component {
+  state = {val:''};
+  render(){
+    return <input onChange={(event) => this.setState({ val: event.target.value })} value={this.state.val} {...this.props} />
+  }
+}
+
+const Homepage = ({classes}) => (
+  <div className={classes.container}>
+    <img src={'/images/headerlogo.png'} className={classes.headerLogo} />
+    <img src={'/images/widePhoto.jpg'} className={classes.hero} />
+    <div className={classes.afterHero}>
+      <div className={classes.columns}>
+        <div className={classes.column}>
+          <Info
+            copy="intro"
+            className="shiftUp"
+          />
+          <Info copy="steering" />
+          <Info copy="discussionsWithRec" />
+          <Info copy="governance" />
+          <Info copy="team" />
+          <Info copy="outro" />
+
+        </div>
+        <div className={classes.column}>
+
+          <Info copy="email" className="loud"/>
+
+          <Info>
+            <SubscribeForm />
+
+          </Info>
+
+          <Thumbnail
+            headline="Click here to view the site plan"
+            src="/images/siteplan.jpg"
+            href="/images/siteplan.jpg"
+            openInNewTab
+          />
+          <Info copy="gardenAspects" />
+          <Info
+            copy="eradication"
+            className="loud"
+          />
+          <Thumbnail
+            headline="Location in Garrison"
+            src="/images/googleEarth.jpg"
+            href="/images/googleEarth.jpg"
+            openInNewTab
+          />
+
+        </div>
+      </div>
+      <Link to="/page-2/">Go to page 2</Link>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  </div>
 )
 
-export default IndexPage
+export default injectSheet(styles)(Homepage)

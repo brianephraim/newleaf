@@ -1,4 +1,8 @@
 const copy = {
+email: {
+body: `Contact New Leaf Restoration by email at  
+[info@newleaf-restoration.org](mailto:info@newleaf-restoration.org)`
+},
 intro: {
 body: `In 1984 this verdant pasture, long a source of feed and water for livestock was protected for conservation by the Osborn family. In 2017 the entire 10.8 acres were [donated to the Town of Philipstown by OSI and Scenic Hudson](https://www.openspaceinstitute.org/news/the-open-space-institute-scenic-hudson-donate-land-for-new-philipstown-park). Framed by trails to Sugarloaf and Castle Rock its abundant loamy earth is bathed in year-round sunlight.
 
@@ -44,7 +48,7 @@ governance: {
 },
 
 
-// -- 
+// --
 
 team: {
 header: `Create a team`,
