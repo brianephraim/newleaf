@@ -1,19 +1,21 @@
 const copy = {
 email: {
-body: `Contact New Leaf Restoration by email at  
+body: `Contact **New Leaf Restoration** by email at  
 [info@newleaf-restoration.org](mailto:info@newleaf-restoration.org)`
 },
 intro: {
-body: `In 1984 this verdant pasture, long a source of feed and water for livestock was protected for conservation by the Osborn family. In 2017 the entire 10.8 acres were [donated to the Town of Philipstown by OSI and Scenic Hudson](https://www.openspaceinstitute.org/news/the-open-space-institute-scenic-hudson-donate-land-for-new-philipstown-park). Framed by trails to Sugarloaf and Castle Rock its abundant loamy earth is bathed in year-round sunlight.
+header: 'The Site',
+body: `In 1984 this verdant pasture, long a source of feed and water for livestock was protected for conservation by the Osborn family. In 2017 the entire 10.8 acres were [donated to the Town of Philipstown by OSI and Scenic Hudson](https://www.openspaceinstitute.org/news/the-open-space-institute-scenic-hudson-donate-land-for-new-philipstown-park). Framed by trails to Sugarloaf and Castle Rock, its uncultivated but loamy earth is bathed in full sun from April to harvest.
 
-Now proposed for Philipstown’s town-wide community gardens, this unique pasture combines agricultural elements rarely found together on the same site. Quenched by an artesian spring on the western edge and the Arden Brook in the eastern tree line, it has all the prerequisites for thriving habitat and creative, varied and successful community agriculture. `,
+Proposed for town-wide community gardens, this uncommon pasture combines agricultural elements rarely found together on the same site. Quenched by an abundant artesian spring and the Arden Brook to the east, the site has all the prerequisites for thriving habitat, productive, varied and successful community agriculture. `,
 },
 // --
 
 steering: {
-body: `A New Leaf steering committee proposed to the Town Board to transition this pasture into town-wide intergenerational community gardens; produce, ornamental and pollinator gardens.  A first draft Master Plan was presented to the Town Board in Spring 2019. Aligning with New Leaf’s vision of an intergenerational site, our proposal is to guarantee an organic plot to every residence in Philipstown.
+header: `Master Plan`,
+body: `A local steering committee proposed to the Town Board to organize a restoration of this pasture into town-wide community gardens with various produce, ornamental and pollinator gardens.  A Master Plan was presented to the Town Board in Spring 2019.  **New Leaf**’s vision is an inter-generational site. Once restored it will guarantee an organic plot to every Philipstown residence while enhancing our community.
 
-The proposed plan is a starting point, not intended to be completed all at once. Listed below are the Garden Aspects; planned, smaller team-based garden projects within the scope of the plan.`,
+The proposed Master Plan is a starting point, phased-in and not intended to be completed all at once. Listed below are the Garden Aspects. These are smaller, planned, team-based garden projects within the scope of the Master Plan.`
 },
 // --
 gardenAspects: {
@@ -22,42 +24,45 @@ body: `- Perennial exchange garden and meandering walk along the brook  
 - Netted community berry garden  
 - Modular individual plot gardens for produce  
 - Separate teen garden   
-- Youth Habitat Education program and 
+- Youth Habitat Education program
 - Educational programming including beekeeping, pollinators, birding, etc. 
-- Irrigation plan with a light-footprint from the artesian spring reduces the need for individual watering trips thereby reducing potential traffic. `,
+- Irrigation plan; a light-footprint from the artesian spring reducing the need for individual watering trips to the garden.`,
 },
 
 // --
 
 eradication: {
-body: `An early order of business is a complete inventory of habitat and the resident invasive species and establish a plan to eradicate invasives and restore agriculture.`
+header: `Invasive Species – Eradication`,
+body: `The pasture has substantial invasive species including multiflora rose, black swallow wort, and others.  As a first order of business **New Leaf** will take an inventory of habitat and invasive species. In consultation with professionals and relevant agencies the Invasive species Team will propose a plan to the Town Board using best practices to eradicate invasives and restore organic agriculture.`
 },
 
 // --
 
 discussionsWithRec: {
-header:`Discussions with Rec Commission`,
-body: `**New Leaf** has been encouraged by the Town Board to consult with the Philipstown Recreation Commission. These positive discussions have vetted **New Leaf's** proposal with the concerns and plans the Recreation Commission has for the property. If **New Leaf** is granted approval by the Town Board, we’ll begin targeted but light density volunteer work on a few limited Garden Aspects. `,
+header:`Discussions with Recreation Commission`,
+body: `The Town Board recommended that New Leaf consult with the Philipstown Recreation Commission. Positive discussions have vetted both **New Leaf’s** proposal and the Recreation Commission’s proposal for the property.  Discussions are ongoing and if **New Leaf** is granted approval by the Town Board, we’ll begin targeted but light density volunteer work on a few limited Garden Aspects for the spring 2020. `,
 },
 
 // --
 
 governance: {
   header:`Governance`,
-  body: `Following approval New Leaf Restoration’s steering committee will begin a process to formalize Master Plan, governance, structure, not-for-profit financial oversight and identify and seek a Board of Directors replacing the steering committee.`
+  body: `If approved **New Leaf Restoration’s** steering committee will begin a process to finalize the Master Plan, governance, structure, not-for-profit financial oversight, identify and seek a Board of Directors in place of the steering committee.`
 },
 
 
 // --
 
 team: {
-header: `Create a team`,
-body: `All work will team based as the chosen way to reduce/limit individual time commitments and still get the project completed. If you would like to know more about the different teams available to either join, lead or creating your own team, please send an email for more info to [info@newleaf-restoration.org](mailto:info@newleaf-restoration.org).`,
+header: `Residents can create your own team
+`,
+body: `To reduce individual time commitments, garden development work will be team- based.  To learn more about the different teams to either join, to lead or even create your own team, please send your ideas to [info@newleaf-restoration.org](mailto:info@newleaf-restoration.org).`,
 },
 
 // --
 outro: {
-body: `Philipstown residents are invited to add their voice to restore a rare agricultural habitat with intergenerational gardens of produce and beauty.  If you feel favorably to this idea, want to learn more about our team-based plan or even get on an early list of plot holders, please add your contact information to receive our monthly updates.`
+header: 'You’re Invited',
+body: `With an opportunity that very few communities will ever enjoy, Philipstown residents are invited to take a small role in restoring a special agricultural habitat.  If you want to attend a Town meeting, a presentation or even  R.S.V.P  to reserve a plot, please add your contact information and receive our progress reports.`
 }
 };
 

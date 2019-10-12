@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "fs-extra": "^8.1.0",
     "gatsby": "^2.15.29",
     "gatsby-image": "^2.2.24",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -37,13 +38,15 @@
   ],
   "license": "MIT",
   "scripts": {
+    "postinstall": "node ./postinstall.js",
     "build": "gatsby build",
     "develop": "gatsby develop --port 8001",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "startStaticServer": "(cd public && python -m SimpleHTTPServer 8008)"
   },
   "repository": {
     "type": "git",

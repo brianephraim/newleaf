@@ -7,6 +7,7 @@ import {
   headerFontName,
   bodyFontName,
   panelBgColor,
+  linkColor
 } from './constants';
 
 
@@ -31,10 +32,16 @@ const styles = {
     fontFamily: 'Sansita One',
     color: 'black',
     marginTop:60,
+    textShadow:'0px 1px 5px white',
   },
 
   shiftUp: {
     marginTop:-200
+  },
+  '@media (max-width: 725px)': {
+    shiftUp: {
+      marginTop:0,
+    },
   },
 
 
@@ -58,15 +65,15 @@ const styles = {
     borderRadius: 5,
     position:'relative',
     '& a': {
-      color:'yellow !important',
+      color:`${linkColor} !important`,
       '&:hover': {
-        color: 'yellow'
+        color: linkColor
       },
       '&:visited': {
-        color: 'yellow'
+        color: linkColor
       },
       '&:active': {
-        color: 'yellow'
+        color: linkColor
       },
     },
   },
