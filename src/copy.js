@@ -1,6 +1,6 @@
 const copy = {
 email: {
-body: `Contact **New Leaf Restoration** by email at  
+body: `Contact **New Leaf Restoration** by email at
 [info@newleaf-restoration.org](mailto:info@newleaf-restoration.org)`
 },
 intro: {
@@ -13,7 +13,7 @@ Proposed for town-wide community gardens, this uncommon pasture combines agricul
 
 steering: {
 header: `Master Plan`,
-body: `A local steering committee proposed to the Town Board to organize a restoration of this pasture into town-wide community gardens with various produce, ornamental and pollinator gardens.  A Master Plan was presented to the Town Board in Spring 2019.  **New Leaf**’s vision is an inter-generational site. Once restored it will guarantee an organic plot to every Philipstown residence while enhancing our community.
+body: `A local steering committee proposed to the Town Board to organize a restoration of this pasture into town-wide community gardens with various produce, ornamental and pollinator gardens.  A Master Plan was presented to the Town Board in Spring 2019.  **New Leaf**’s vision is an inter-generational site. Once restored the produce garden will offer an organic plot to each residence in Philipstown while enhancing our community.
 
 The proposed Master Plan is a starting point, phased-in and not intended to be completed all at once. Listed below are the Garden Aspects. These are smaller, planned, team-based garden projects within the scope of the Master Plan.`
 },
@@ -40,7 +40,7 @@ body: `The pasture has substantial invasive species including multiflora rose, b
 
 discussionsWithRec: {
 header:`Discussions with Recreation Commission`,
-body: `The Town Board recommended that New Leaf consult with the Philipstown Recreation Commission. Positive discussions have vetted both **New Leaf’s** proposal and the Recreation Commission’s proposal for the property.  Discussions are ongoing and if **New Leaf** is granted approval by the Town Board, we’ll begin targeted but light density volunteer work on a few limited Garden Aspects for the spring 2020. `,
+body: `The Town Board recommended that **New Leaf** consult with the Philipstown Recreation Commission. Positive discussions have vetted both **New Leaf’s** proposal and the Recreation Commission’s proposal for the property. Discussions are ongoing and if **New Leaf** is granted approval by the Town Board, we will begin targeted but light density volunteer work on a few limited Garden Aspects for the spring 2020.`,
 },
 
 // --

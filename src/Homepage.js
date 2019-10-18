@@ -125,6 +125,7 @@ const styles={
 
 const Homepage = ({classes}) => (
   <div className={classes.container}>
+    <SEO />
     <div className={classes.headerLogoWrap}>
       <img src={'/images/headerlogo.png'} className={classes.headerLogo} />
     </div>
@@ -172,18 +173,19 @@ const Homepage = ({classes}) => (
             href="/images/siteplan.jpg"
             openInNewTab
           />
+          <Info copy="gardenAspects" />
           <div className={classes.hideWhenWide}>
             <Info copy="discussionsWithRec" />
             <Info copy="governance" />
           </div>
-          <Info copy="gardenAspects" />
+
           <Info
             copy="eradication"
           />
           <Thumbnail
             headline="Location in Garrison"
-            src="/images/googleEarth.jpg"
-            href="/images/googleEarth.jpg"
+            src="/images/googleEarth.png"
+            href="/images/googleEarth.png"
             openInNewTab
           />
           <div className={classes.hideWhenWide}>

@@ -24,6 +24,8 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   )
+  console.log('site',site);
+  console.log('description, lang, meta, title',description, lang, meta, title)
 
   const metaDescription = description || site.siteMetadata.description
 
@@ -32,7 +34,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={site.siteMetadata.title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
@@ -41,11 +43,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: `A local steering committee proposed to the Town Board to organize a restoration of this pasture into town-wide community gardens with various produce, ornamental and pollinator gardens.`,
         },
         {
           property: `og:type`,
