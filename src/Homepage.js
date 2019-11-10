@@ -144,7 +144,7 @@ const Homepage = ({classes}) => (
           <Info copy="outro" />
           <Info>
             <div className={classes.logosWrap}>
-              <img src="http://putnam.cce.cornell.edu/images/logo.png" />
+              {false && <img src="http://putnam.cce.cornell.edu/images/logo.png" />}
               <img src="https://images.squarespace-cdn.com/content/5a2805f490bcce703c8d5b33/1517774938870-VYOFY3ZA32IE1NBIQYU5/PHASLogo.gif?content-type=image%2Fgif" />
             </div>
           </Info>
@@ -193,7 +193,7 @@ const Homepage = ({classes}) => (
             <Info copy="outro" />
             <Info>
               <div className={classes.logosWrap}>
-                <img src="http://putnam.cce.cornell.edu/images/logo.png" />
+                {false && <img src="http://putnam.cce.cornell.edu/images/logo.png" />}
                 <img src="https://images.squarespace-cdn.com/content/5a2805f490bcce703c8d5b33/1517774938870-VYOFY3ZA32IE1NBIQYU5/PHASLogo.gif?content-type=image%2Fgif" />
               </div>
             </Info>
