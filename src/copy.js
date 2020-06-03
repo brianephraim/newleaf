@@ -13,17 +13,19 @@ Proposed for town-wide community gardens, this uncommon pasture combines agricul
 
 steering: {
 header: `Our Vision`,
-body: `**New Leaf’s** steering group has proposed to organize a restoration of this pasture into town-wide flowering, intergenerational community gardens of native pollinator, perennial, berry and individual produce gardens. A proposed Master Plan was presented to the Town Board in Spring 2019. Once restored the produce gardens can offer an organic plot to each residence in Philipstown.
+body: `New Leaf Restoration, Inc. is a limited liability company formed in 2020, with pending 501(c)(3) nonprofit status. The current working committee, which will form the Board of Directors upon nonprofit status approval, is comprised of seven members. An Advisory Council, with members from different sectors and areas of expertise in the Philipstown community, is also being formed.
 
-Starting small, the proposed phased-in Master Plan is team-based and to be completed over time. Listed here are modular **Garden Aspects** proposed for the pasture. These are planned, resident-led, team-based garden projects within the scope of a final approved Master Plan.`
+Upon nonprofit status approval, New Leaf Restoration, Inc., with input from the Philipstown community and the Advisory Council, will develop a plan to implement and install various types of gardens on the site. Some of the ideas currently being considered include, but are not limited to: perennials, pollinator-friendly plants, a teen garden, community berry garden and individual produce gardens, the last of which would be offered to Philipstown residents for individual usage.
+
+Charter partnerships include the Cornell Cooperative Extension of Putnam County, Stonecrop Gardens, and the Putnam Highlands Audubon Society.`
 },
 // --
 gardenAspects: {
 header: `Garden Aspects`,
-body: `- Perennial exchange garden and meandering walk along the brook  
-- Netted community berry garden  
-- Modular individual plot gardens for produce  
-- Separate teen garden   
+body: `- Perennial exchange garden and meandering walk along the brook
+- Netted community berry garden
+- Modular individual plot gardens for produce
+- Separate teen garden
 - Youth Habitat Education program
 - Educational programming including beekeeping, pollinators, birding, etc. 
 - Irrigation plan; a light-footprint from the artesian spring reducing the need for individual watering trips to the garden.`,
@@ -41,17 +43,26 @@ body: `The pasture has substantial invasive species including multiflora rose, b
 discussionsWithRec: {
 header:`Discussions with Recreation Commission`,
 body: `
-*Feb. 2020* 
+*Feb. 2020*
 
 The Town Board referred **New Leaf** to consult with the Philipstown Recreation Commission. Positive discussions have vetted **New Leaf’s** proposal relative to the property’s conservation easements and Recreation Commission plans for the property. Discussions are progressing well and there will be changes to our proposed Master Plan. If **New Leaf** is granted approval by the Town Board we will announce planning sessions to identify teams of interested resident for light density volunteer work on a few Garden Aspects for 2020.`,
 },
 
 // --
 
+mission: {
+  header:`Mission`,
+  body: `The mission of New Leaf Restoration, Inc. is to plan and implement a restoration of the pasture at the corner of Routes 9D and 403 in the Town of Philipstown, NY, into an intergenerational, collaborative garden and community resource.
+
+New Leaf Restoration, Inc. will fulfill its mission using a team-based approach to planning, creating, and maintaining intergenerational gardens. Our objective is to provide a community resource which supports and promotes the therapeutic and restorative benefits of community gardening and agricultural traditions. Partnering with other local organizations, New Leaf Restoration, Inc. will also be an educational resource. Charter partnerships include the Cornell Cooperative Extension of Putnam County, Stonecrop Gardens, and the Putnam Highlands Audubon Society.`
+},
+
+// --
 governance: {
   header:`Governance`,
   body: `If approved **New Leaf Restoration’s** steering committee will begin a process to finalize the Master Plan, governance, structure, not-for-profit financial oversight, identify and seek a Board of Directors in place of the steering committee.`
 },
+
 
 
 // --
@@ -65,7 +76,7 @@ body: `To reduce individual time commitments, garden development work will be te
 // --
 outro: {
 header: 'You’re Invited',
-body: `With an opportunity that very few communities will ever enjoy, Philipstown residents are invited to take a small role in restoring a special agricultural habitat.  If you want to attend a Town meeting, a presentation or even  R.S.V.P  to reserve a plot, please add your contact information and receive our progress reports.`
+body: `With an opportunity that very few communities will ever enjoy, Philipstown residents are invited to take a small role in restoring a special agricultural habitat.  If you want to attend a Town meeting, a presentation or even  R.S.V.P  to reserve a plot, please add your contact information to receive our progress reports and look for updates and news in the coming months.`
 }
 };
 

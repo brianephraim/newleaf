@@ -70,7 +70,18 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+        <style type="text/css">{`
+          :any-link {
+            color: green;
+            text-decoration: none;
+          }
+          :any-link:active {
+            color: orange;
+            text-decoration: none;
+          }
+      `}</style>
+    </Helmet>
   )
 }
 

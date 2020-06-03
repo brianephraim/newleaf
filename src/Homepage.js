@@ -7,7 +7,7 @@ import SEO from "./components/seo"
 import {Image,Text} from 'react-native';
 import Markdown from 'react-markdown';
 import copy from './copy';
-import Info from './Info';
+import Info, {Promo} from './Info';
 import Thumbnail from './Thumbnail';
 import './reset.css';
 import injectSheet from 'react-jss';
@@ -61,11 +61,26 @@ outro
 
 const styles={
   headerLogoWrap: {
-    margin:80,
+    margin:'80px 80px 20px 80px',
     alignSelf:'stretch',
   },
   headerLogo: {
     width:'100%',
+    marginBottom:20,
+  },
+  headerText: {
+    marginTop:10,
+    fontFamily: 'Sansita One',
+    color: '#4E852C',
+    marginTop:10,
+    textShadow:'0px 1px 5px white',
+    fontSize: 30,
+    textAlign:'center',
+  },
+  '@media (max-width: 500px)': {
+    headerText: {
+      fontSize: 20,
+    },
   },
   container: {
     display:'flex',
@@ -128,7 +143,10 @@ const Homepage = ({classes}) => (
     <SEO />
     <div className={classes.headerLogoWrap}>
       <img src={'/images/headerlogo.png'} className={classes.headerLogo} />
+      <p className={classes.headerText}>New Community Gardens</p>
+      <p className={classes.headerText}>Town of Philipstown</p>
     </div>
+    <Promo />
     <img src={'/images/widePhoto.jpg'} className={classes.hero} />
     <div className={classes.afterHero}>
       <div className={classes.columns}>
@@ -138,16 +156,15 @@ const Homepage = ({classes}) => (
             className="shiftUp"
           />
           <Info copy="steering" />
-          <Info copy="discussionsWithRec" />
-          <Info copy="governance" />
+          <Info copy="mission" />
           <Info copy="team" />
           <Info copy="outro" />
-          <Info>
+          {false && <Info>
             <div className={classes.logosWrap}>
               {false && <img src="http://putnam.cce.cornell.edu/images/logo.png" />}
               <img src="https://images.squarespace-cdn.com/content/5a2805f490bcce703c8d5b33/1517774938870-VYOFY3ZA32IE1NBIQYU5/PHASLogo.gif?content-type=image%2Fgif" />
             </div>
-          </Info>
+          </Info>}
         </div>
         <div className={classes.column}>
           <div className={classes.hideWhenWide}>
@@ -175,8 +192,7 @@ const Homepage = ({classes}) => (
           />
           <Info copy="gardenAspects" />
           <div className={classes.hideWhenWide}>
-            <Info copy="discussionsWithRec" />
-            <Info copy="governance" />
+            <Info copy="mission" />
           </div>
 
           <Info
@@ -191,12 +207,12 @@ const Homepage = ({classes}) => (
           <div className={classes.hideWhenWide}>
             <Info copy="team" />
             <Info copy="outro" />
-            <Info>
+            {false && (<Info>
               <div className={classes.logosWrap}>
                 {false && <img src="http://putnam.cce.cornell.edu/images/logo.png" />}
                 <img src="https://images.squarespace-cdn.com/content/5a2805f490bcce703c8d5b33/1517774938870-VYOFY3ZA32IE1NBIQYU5/PHASLogo.gif?content-type=image%2Fgif" />
               </div>
-            </Info>
+            </Info>)}
           </div>
 
         </div>
