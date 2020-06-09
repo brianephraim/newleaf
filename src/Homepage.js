@@ -200,8 +200,8 @@ const Homepage = ({classes}) => (
           />
           <Thumbnail
             headline="Location in Garrison"
-            src="/images/googleEarth.png"
-            href="/images/googleEarth.png"
+            src="/images/redboxSurvey.jpg"
+            href="/images/redboxSurvey.jpg"
             openInNewTab
           />
           <div className={classes.hideWhenWide}>
