@@ -1,6 +1,6 @@
 const copy = {
 email: {
-body: `Contact **New Leaf Restoration** by email at
+body: `Contact **New Leaf Restoration** by email at  
 [info@newleaf-restoration.org ](mailto:info@newleaf-restoration.org)`
 },
 intro: {
@@ -27,7 +27,7 @@ body: `- Perennial exchange garden and meandering walk along the brook
 - Modular individual plot gardens for produce
 - Separate teen garden
 - Youth Habitat Education program
-- Educational programming including beekeeping, pollinators, birding, etc. 
+- Educational programming including beekeeping, pollinators, birding, etc.
 - Irrigation plan; a light-footprint from the artesian spring reducing the need for individual watering trips to the garden.`,
 },
 
@@ -54,7 +54,7 @@ mission: {
   header:`Mission`,
   body: `The mission of New Leaf Restoration, Inc. is to plan and implement a restoration of the pasture at the corner of Routes 9D and 403 in the Town of Philipstown, NY, into an intergenerational, collaborative garden and community resource.
 
-New Leaf Restoration, Inc. will fulfill its mission using a team-based approach to planning, creating, and maintaining intergenerational gardens. Our objective is to provide a community resource which supports and promotes the therapeutic and restorative benefits of community gardening and agricultural traditions. Partnering with other local organizations, New Leaf Restoration, Inc. will also be an educational resource. Charter partnerships include the Cornell Cooperative Extension of Putnam County, Stonecrop Gardens, and the Putnam Highlands Audubon Society.`
+New Leaf Restoration, Inc. will fulfill its mission using a team-based approach to planning, creating, and maintaining intergenerational gardens. Our objective is to provide a community resource which supports and promotes the therapeutic and restorative benefits of community gardening and agricultural traditions.`
 },
 
 // --
@@ -68,7 +68,7 @@ governance: {
 // --
 
 team: {
-header: `Residents can create your own team
+header: `Residents can create their own teams
 `,
 body: `To reduce individual time commitments, garden development work will be team- based.  To learn more about the different teams to either join, to lead or even create your own team, please send your ideas to [tjfdonovan@gmail.com](mailto:tjfdonovan@gmail.com).`,
 },
