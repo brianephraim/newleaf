@@ -7,19 +7,20 @@ import SEO from "./components/seo"
 import {Image,Text} from 'react-native';
 import Markdown from 'react-markdown';
 import copy from './copy';
-import Info, {Promo} from './Info';
+import Info from './Info';
 import Thumbnail from './Thumbnail';
 import './reset.css';
 import injectSheet from 'react-jss';
 import SubscribeForm from './SubscribeForm';
-import Affiliates from './Affiliates';
 import {
   headerFontName,
   bodyFontName,
   panelBgColor,
   linkColor,
 } from './constants';
+import Affiliates from './Affiliates';
 import EventsList from './EventsList';
+
 
 const copyX = `
 [google](https://www.google.com)
@@ -45,6 +46,7 @@ class Page extends React.PureComponent {
     return (
       <Markdown
         linkTarget={targetBlank}
+        showAll
       >{copyX}</Markdown>
     );
   }
@@ -144,7 +146,6 @@ const styles={
 
 };
 
-
 const Homepage = ({classes}) => (
   <div className={classes.container}>
     <SEO />
@@ -154,78 +155,13 @@ const Homepage = ({classes}) => (
       <p className={classes.headerText}>Town of Philipstown</p>
       <p className={classes.headerText}>Garrison, NY</p>
     </div>
-    <EventsList />
     <img src={'/images/widePhoto.jpg'} className={classes.hero} />
-    <div className={classes.afterHero}>
-      <div className={classes.columns}>
-        <div className={[classes.column,classes.hideWhenNarrow].join(' ')}>
-          <Info
-            copy="intro"
-            className="shiftUp"
-          />
-          <Info copy="steering" />
-          <Info copy="mission" />
-          <Info copy="team" />
-          <Info copy="outro" />
-          <Affiliates />
-        </div>
-        <div className={classes.column}>
-          <div className={classes.hideWhenWide}>
-            <Info
-              copy="intro"
-              className="shiftUp"
-            />
-            <Info copy="steering" />
-          </div>
-          <Info copy="email" className="loud"/>
-          <div className={classes.orderLastWhenNarrow}>
-            <div className={classes.hideWhenWide}>
-              <Info copy="email" className="loud"/>
-            </div>
-            <Info>
-              <SubscribeForm />
-            </Info>
-            <Affiliates />
-          </div>
+    <p className={classes.headerText}>UPCOMING EVENTS:</p>
+    <EventsList
+      showAll
+    />
 
-          {false && (<Thumbnail
-            headline="Click here to view the site plan"
-            src="/images/siteplan.jpg"
-            href="/images/siteplan.jpg"
-            openInNewTab
-          />)}
-          <Thumbnail
-            headline="Location in Garrison"
-            src="/images/redboxSurvey.jpg"
-            href="/images/redboxSurvey.jpg"
-            openInNewTab
-          />
-          <Info copy="gardenAspects" />
-          <div className={classes.hideWhenWide}>
-            <Info copy="mission" />
-          </div>
 
-          <Info
-            copy="eradication"
-          />
-          <Info
-            copy="council"
-          />
-
-          <div className={classes.hideWhenWide}>
-            <Info copy="team" />
-            <Info copy="outro" />
-            {false && (<Info>
-              <div className={classes.logosWrap}>
-                {false && <img src="http://putnam.cce.cornell.edu/images/logo.png" />}
-                <img src="https://images.squarespace-cdn.com/content/5a2805f490bcce703c8d5b33/1517774938870-VYOFY3ZA32IE1NBIQYU5/PHASLogo.gif?content-type=image%2Fgif" />
-              </div>
-            </Info>)}
-          </div>
-
-        </div>
-      </div>
-    </div>
     <div className={classes.footer} />
   </div>
 )
