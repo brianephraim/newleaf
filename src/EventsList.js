@@ -72,7 +72,7 @@ class MarkdownHideAble extends PureComponent {
 const events = [
   {
     name: 'infoSession3',
-    date: new Date('June 20, 2020 03:24:00').getTime(),
+    date: new Date('June 23, 2020 03:24:00').getTime(),
     copy: `${''
 }### New Leaf Restoration - Info Session #3
 Guest Speaker Catherine Serreau-Thompson of Cornell Coop. Ext.
@@ -131,6 +131,9 @@ class EventsList extends PureComponent {
     const eventsNotExpired = events.filter(({date}) => {
       const now = Date.now();
       const oneDay = 86400000;
+      // console.log('date',new Date(date));
+      // console.log('no w',new Date(now));
+      // console.log('------')
       return ((oneDay + date) - now) > 0;
       return
     });
