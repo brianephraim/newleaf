@@ -1,6 +1,6 @@
 const copy = {
 email: {
-body: `Contact **New Leaf Restoration** by email at  
+body: `Contact **New Leaf Restoration** by email at
 [info@newleaf-restoration.org ](mailto:info@newleaf-restoration.org)`
 },
 intro: {
@@ -82,7 +82,7 @@ body: `With an opportunity that very few communities will ever enjoy, Philipstow
 
 // --
 council: {
-header: 'Advisory Counsel',
+header: 'Working Committee',
 body: `### Tim Donovan${'\n'}Tim Donovan has been involved with various  initiatives to support an active, healthy and positive culture in Philipstown. Prior to co-founding New Leaf Restoration, Inc.  Tim led the South Redoubt Reclamation Team and along with David Gordon produced the Garrison Commons documentary Harvesting a Diamond. He launched P.L.A.Y, Philipstown Lacrosse Association for Youth, was a director of C.Y.O. and has coached over 1,000 local young people. Currently he serves on the boards of the Putnam History Museum and the Friends of Mine Dock Park, Inc. and is a member of the West Point-Highland Falls Rotary. With his wife Mary Cathleen, a confirmed gardener,  they moved to Garrison in 1986 and raised their four children. Today they remain a positive influence in the lives of their children and five grandchildren, their friends, parish and family.  Tim is a technical sales engineer working with industrial generator systems.
 
 ### Lori Moss${'\n'}Lori Moss is a lifelong resident of Philipstown. She is the Associate Director of Communications at the Garden Conservancy, Inc., a national nonprofit organization, based in Garrison, NY, whose mission is to preserve, share, and celebrate America’s gardens and diverse gardening traditions for the education and inspiration of the public. Before joining the Garden Conservancy in 2015, Lori served for nine years as Assistant Director of Manitoga/The Russel Wright Design Center, the former home and woodland landscape of preeminent mid-20th century designer Russel Wright, in Garrison, NY, and for four years as Office Administrator at the Putnam History Museum in Cold Spring, NY. Prior to taking a fourteen year professional hiatus to raise her four children with her husband, Hugh, Lori worked for seven years for a pharmaceutical advertising agency in New York City. She is also a member of the Philipstown Garden Club and an amateur nature photographer.
