@@ -1,6 +1,6 @@
 const copy = {
 email: {
-body: `Contact **New Leaf Restoration** by email at
+body: `Contact **New Leaf Restoration** by email at${'  '}
 [info@newleaf-restoration.org ](mailto:info@newleaf-restoration.org)`
 },
 intro: {
@@ -11,7 +11,7 @@ Proposed for town-wide community gardens, this uncommon pasture combines agricul
 },
 // --
 
-steering: {
+vision: {
 header: `Our Vision`,
 body: `New Leaf Restoration, Inc. is a limited liability company formed in 2020, with pending 501(c)(3) nonprofit status. The current working committee, which will form the Board of Directors upon nonprofit status approval, is comprised of seven members. An Advisory Council, with members from different sectors and areas of expertise in the Philipstown community, is also being formed.
 
@@ -83,19 +83,23 @@ body: `With an opportunity that very few communities will ever enjoy, Philipstow
 // --
 council: {
 header: 'Working Committee',
-body: `### Tim Donovan${'\n'}Tim Donovan has been involved with various  initiatives to support an active, healthy and positive culture in Philipstown. Prior to co-founding New Leaf Restoration, Inc.  Tim led the South Redoubt Reclamation Team and along with David Gordon produced the Garrison Commons documentary Harvesting a Diamond. He launched P.L.A.Y, Philipstown Lacrosse Association for Youth, was a director of C.Y.O. and has coached over 1,000 local young people. Currently he serves on the boards of the Putnam History Museum and the Friends of Mine Dock Park, Inc. and is a member of the West Point-Highland Falls Rotary. With his wife Mary Cathleen, a confirmed gardener,  they moved to Garrison in 1986 and raised their four children. Today they remain a positive influence in the lives of their children and five grandchildren, their friends, parish and family.  Tim is a technical sales engineer working with industrial generator systems.
+body: `**Ann Borthwick** has lived in Philipstown for almost 20 years. She and her husband, Richard Cogliandro, lived in the Highlands before moving to their current home in Garrison, where they have a small flock of Teeswater longwool sheep, chickens and two rescue donkeys. Ann is an avid gardener and has recently completed the NYBG Certificate of Landscape Design. She came to the U.S. from Australia 26 years ago to work on a national education project and stayed. Ann works from home as Learning Systems Architect for the National Center on Education and the Economy, a Washington, DC-based not-for-profit that works nationally with school districts to redesign their systems.
 
-### Lori Moss${'\n'}Lori Moss is a lifelong resident of Philipstown. She is the Associate Director of Communications at the Garden Conservancy, Inc., a national nonprofit organization, based in Garrison, NY, whose mission is to preserve, share, and celebrate America’s gardens and diverse gardening traditions for the education and inspiration of the public. Before joining the Garden Conservancy in 2015, Lori served for nine years as Assistant Director of Manitoga/The Russel Wright Design Center, the former home and woodland landscape of preeminent mid-20th century designer Russel Wright, in Garrison, NY, and for four years as Office Administrator at the Putnam History Museum in Cold Spring, NY. Prior to taking a fourteen year professional hiatus to raise her four children with her husband, Hugh, Lori worked for seven years for a pharmaceutical advertising agency in New York City. She is also a member of the Philipstown Garden Club and an amateur nature photographer.
+**Tim Donovan** has been involved with various  initiatives to support an active, healthy and positive culture in Philipstown. Prior to co-founding New Leaf Restoration, Inc.  Tim led the South Redoubt Reclamation Team and along with David Gordon produced the Garrison Commons documentary Harvesting a Diamond. He launched P.L.A.Y, Philipstown Lacrosse Association for Youth, was a director of C.Y.O. and has coached over 1,000 local young people. Currently he serves on the boards of the Putnam History Museum and the Friends of Mine Dock Park, Inc. and is a member of the West Point-Highland Falls Rotary. With his wife Mary Cathleen, a confirmed gardener,  they moved to Garrison in 1986 and raised their four children. Today they remain a positive influence in the lives of their children and five grandchildren, their friends, parish and family.  Tim is a technical sales engineer working with industrial generator systems.
 
-### Carl Nelson${'\n'}Carl Nelson resided in Garrison for over 20 years Along with his wife Karen and their three daughters.  The Nelsons are very active within the community and enjoy their free time hiking, biking and boating in the Hudson Valley. Carl leads the mergers and acquisitions group for NFP Corp, a NYC based insurance brokerage firm. He graduated from Syracuse University’s Martin J. Whitman School of Management and holds a Master of Business Administration from Fordham University.
+**Brian Ephraim** grew up in Putnam County and has lived in Garrison for the past 5 years with his wife Mary Kate.  He is a professional software developer, building apps for brands such as OkCupid and TED Conferences.
 
-### Ann Borthwick${'\n'}Ann Borthwick has lived in Philipstown for almost 20 years. She and her husband, Richard Cogliandro, lived in the Highlands before moving to their current home in Garrison, where they have a small flock of Teeswater longwool sheep, chickens and two rescue donkeys. Ann is an avid gardener and has recently completed the NYBG Certificate of Landscape Design. She came to the U.S. from Australia 26 years ago to work on a national education project and stayed. Ann works from home as Learning Systems Architect for the National Center on Education and the Economy, a Washington, DC-based not-for-profit that works nationally with school districts to redesign their systems.
+**Lori Moss** is a lifelong resident of Philipstown. She is the Associate Director of Communications at the Garden Conservancy, Inc., a national nonprofit organization, based in Garrison, NY, whose mission is to preserve, share, and celebrate America’s gardens and diverse gardening traditions for the education and inspiration of the public. Before joining the Garden Conservancy in 2015, Lori served for nine years as Assistant Director of Manitoga/The Russel Wright Design Center, the former home and woodland landscape of preeminent mid-20th century designer Russel Wright, in Garrison, NY, and for four years as Office Administrator at the Putnam History Museum in Cold Spring, NY. Prior to taking a fourteen year professional hiatus to raise her four children with her husband, Hugh, Lori worked for seven years for a pharmaceutical advertising agency in New York City. She is also a member of the Philipstown Garden Club and an amateur nature photographer.
 
-### Brian Ephraim${'\n'}Brian Ephraim grew up in Putnam County and has lived in Garrison for the past 5 years with his wife Mary Kate.  He is a professional software developer, building apps for brands such as OkCupid and TED Conferences.
+**Grace Kennedy**
 
-### Grace Kennedy
+**Lew Kingsley**
 
-### Lew Kingsley
+**Carl Nelson** resided in Garrison for over 20 years Along with his wife Karen and their three daughters.  The Nelsons are very active within the community and enjoy their free time hiking, biking and boating in the Hudson Valley. Carl leads the mergers and acquisitions group for NFP Corp, a NYC based insurance brokerage firm. He graduated from Syracuse University’s Martin J. Whitman School of Management and holds a Master of Business Administration from Fordham University.
+
+
+
+
 `
 }
 };

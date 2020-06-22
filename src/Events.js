@@ -152,7 +152,6 @@ const Homepage = ({classes}) => (
     <div className={classes.headerLogoWrap}>
       <img src={'/images/headerlogo.png'} className={classes.headerLogo} />
       <p className={classes.headerText}>Philipstown Community Gardens</p>
-      <p className={classes.headerText}>Town of Philipstown</p>
       <p className={classes.headerText}>Garrison, NY</p>
     </div>
     <img src={'/images/widePhoto.jpg'} className={classes.hero} />

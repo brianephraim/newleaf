@@ -100,6 +100,7 @@ const styles={
   },
   hero: {
     width:'100%',
+    marginBottom:30,
   },
   logosWrap: {
     display:'flex',
@@ -151,79 +152,76 @@ const Homepage = ({classes}) => (
     <div className={classes.headerLogoWrap}>
       <img src={'/images/headerlogo.png'} className={classes.headerLogo} />
       <p className={classes.headerText}>Philipstown Community Gardens</p>
-      <p className={classes.headerText}>Town of Philipstown</p>
       <p className={classes.headerText}>Garrison, NY</p>
     </div>
-    <EventsList />
     <img src={'/images/widePhoto.jpg'} className={classes.hero} />
-    <div className={classes.afterHero}>
+    <EventsList />
+    <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
       <div className={classes.columns}>
-        <div className={[classes.column,classes.hideWhenNarrow].join(' ')}>
+        <div className={classes.column}>
           <Info
             copy="intro"
-            className="shiftUp"
           />
-          <Info copy="steering" />
-          <Info copy="mission" />
-          <Info copy="team" />
-          <Info copy="outro" />
-
         </div>
         <div className={classes.column}>
-          <div className={classes.hideWhenWide}>
-            <Info
-              copy="intro"
-              className="shiftUp"
-            />
-            <Info copy="steering" />
-          </div>
-          <Info copy="email" className="loud"/>
-          <div className={classes.orderLastWhenNarrow}>
-            <div className={classes.hideWhenWide}>
-              <Info copy="email" className="loud"/>
-            </div>
-            <Info>
-              <SubscribeForm />
-            </Info>
-            <Affiliates />
-
-          </div>
-
-          {false && (<Thumbnail
-            headline="Click here to view the site plan"
-            src="/images/siteplan.jpg"
-            href="/images/siteplan.jpg"
-            openInNewTab
-          />)}
           <Thumbnail
             headline="Location in Garrison"
             src="/images/redboxSurvey.jpg"
             href="/images/redboxSurvey.jpg"
             openInNewTab
           />
+        </div>
+      </div>
+      <div className={classes.columns}>
+        <div className={classes.column}>
+          <Info copy="vision" />
+          <Affiliates />
           <Info copy="gardenAspects" />
-          <div className={classes.hideWhenWide}>
-            <Info copy="mission" />
-          </div>
+          <Info
+            copy="eradication"
+          />
+          <Info>
+            <SubscribeForm />
+          </Info>
+          <Info copy="email" className="loud"/>
 
+        </div>
+        <div className={classes.column}>
+          <Info copy="mission" />
+          <Info
+            copy="council"
+          />
+        </div>
+      </div>
+    </div>
+
+
+    <div className={[classes.afterHero,classes.hideWhenWide].join(' ')}>
+      <div className={classes.columns}>
+        <div className={classes.column}>
+          <Info
+            copy="intro"
+          />
+          <Thumbnail
+            headline="Location in Garrison"
+            src="/images/redboxSurvey.jpg"
+            href="/images/redboxSurvey.jpg"
+            openInNewTab
+          />
+          <Info copy="vision" />
+          <Affiliates />
+          <Info copy="mission" />
+          <Info copy="gardenAspects" />
           <Info
             copy="eradication"
           />
           <Info
             copy="council"
           />
-
-          <div className={classes.hideWhenWide}>
-            <Info copy="team" />
-
-            <Info copy="outro" />
-            {false && (<Info>
-              <div className={classes.logosWrap}>
-                {false && <img src="http://putnam.cce.cornell.edu/images/logo.png" />}
-                <img src="https://images.squarespace-cdn.com/content/5a2805f490bcce703c8d5b33/1517774938870-VYOFY3ZA32IE1NBIQYU5/PHASLogo.gif?content-type=image%2Fgif" />
-              </div>
-            </Info>)}
-          </div>
+          <Info>
+            <SubscribeForm />
+          </Info>
+          <Info copy="email" className="loud"/>
 
         </div>
       </div>

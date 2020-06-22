@@ -14,7 +14,12 @@ const styles={
     padding:20,
     flexWrap: 'wrap',
   },
-  logoItem: {
+  logoItemLink: {
+    display:'block',
+    maxHeight: 152,
+    margin:10,
+  },
+  logoItemImage: {
     display:'block',
     maxHeight: 152,
   },
@@ -25,16 +30,22 @@ const Affiliates = ({classes}) => (
     <div className={classes.logosWrap}>
       {
         [
-          'http://putnam.cce.cornell.edu/images/logo.png',
-          'https://images.squarespace-cdn.com/content/5a2805f490bcce703c8d5b33/1517774938870-VYOFY3ZA32IE1NBIQYU5/PHASLogo.gif?content-type=image%2Fgif',
-          'https://butterfieldlibrary.org/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-constantcontact-v1-0-8%2F488%2F182488%2FHdSMRhlS%2F086db6bafded4ac797f5052e15fde6a6&methods=resize%2C1000%2C5000',
-          '/images/desmondfish.jpg'
-        ].map(url => (
-          <img
-            src={url}
-            key={url}
-            className={classes.logoItem}
-          />
+          {src:'/images/cornell.jpg',href:'http://putnam.cce.cornell.edu/'},
+          {src:'/images/audubon.gif',href:'https://www.putnamhighlandsaudubon.org/'},
+          {src:'/images/butterfield.png',href:'https://butterfieldlibrary.org/'},
+          {src:'/images/desmondfish.jpg',href:'https://desmond-fish-library.square.site/'}
+        ].map(({src,href}) => (
+          <a
+            href={href}
+            target="_blank"
+            key={href}
+            className={classes.logoItemLink}
+          >
+            <img
+              src={src}
+              className={classes.logoItemImage}
+            />
+          </a>
         ))
       }
 

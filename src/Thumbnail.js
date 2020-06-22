@@ -14,7 +14,7 @@ const styles = {
     padding:20,
     fontFamily: headerFontName,
     border: `10px solid rgba(255,255,255,.25)`,
-    backgroundColor: panelBgColor,
+    // backgroundColor: panelBgColor,
     display:'flex',
     flexDirection:'column',
     marginTop: 20,
