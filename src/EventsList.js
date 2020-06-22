@@ -156,7 +156,7 @@ class EventsList extends PureComponent {
           </Markdown>)
         })
       }
-      <MarkdownHideAble
+      {false && (<MarkdownHideAble
         className={classes.promoText}
         name="infoSession6"
         key="infoSession6"
@@ -164,7 +164,7 @@ class EventsList extends PureComponent {
         showImportant={!showAll}
       >
         {`[See all upcoming events >](/events)`}
-      </MarkdownHideAble>
+      </MarkdownHideAble>)}
 
 
       </div>

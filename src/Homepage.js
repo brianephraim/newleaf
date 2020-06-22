@@ -167,7 +167,7 @@ const Homepage = ({classes}) => (
           <Info copy="mission" />
           <Info copy="team" />
           <Info copy="outro" />
-          <Affiliates />
+
         </div>
         <div className={classes.column}>
           <div className={classes.hideWhenWide}>
@@ -186,6 +186,7 @@ const Homepage = ({classes}) => (
               <SubscribeForm />
             </Info>
             <Affiliates />
+
           </div>
 
           {false && (<Thumbnail
@@ -214,6 +215,7 @@ const Homepage = ({classes}) => (
 
           <div className={classes.hideWhenWide}>
             <Info copy="team" />
+
             <Info copy="outro" />
             {false && (<Info>
               <div className={classes.logosWrap}>
