@@ -88,11 +88,6 @@ Tuesday, June 23, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/
     date: new Date('June 30, 2020 03:24:00').getTime(),
     copy: `${''
 }### New Leaf Restoration - Info Session #4
-Session #4- Topics:
-- Summer Volunteer Opportunities
-- Taking Inventory of the native and invasive species on the entire parcel
-- Establishing the garden area
-- Cultivating and preparing the soil for Fall 2020 planting
 
 Tuesday, June 30, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/0wifGK10m6/instances/enKfM3jWsa/)`,
   },
@@ -101,10 +96,6 @@ Tuesday, June 30, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/
     date: new Date('July 7, 2020 03:24:00').getTime(),
     copy: `${''
 }### New Leaf Restoration - Info Session #5
-Session #5 - Infrastructure Plans:
-- Solar drip-irrigation from the artesian spring on site
-- Fencing options
-- Care and Maintenance
 
 Tuesday, July 7, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/IgSXels0NP/instances/K0OGnvwidf/)`,
   },
@@ -113,9 +104,6 @@ Tuesday, July 7, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/I
     date: new Date('July 14, 2020 03:24:00').getTime(),
     copy: `${''
 }### New Leaf Restoration - Info Session #6
-Session #6 - Organizational Communications
-- Will foster a continuing and collaborative dialogue with new Leaf Restoration, the gardening community and different gardening traditions.
-- Use of website and emails to subscribe, use of social media and local and regional press.
 
 Tuesday, July 14, 7 – 8 p.m. [REGISTER NOW!](https://api.getlocalhop.com/share?instance=TxKMAtBBWE )`
   },
