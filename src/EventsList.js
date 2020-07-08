@@ -89,24 +89,31 @@ Tuesday, June 23, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/
     copy: `${''
 }### New Leaf Restoration - Info Session #4
 
+Speaker - Matthew Weigman of Philipstown Garden Club
+
+Topic- Philipstown Pollinator Pathway
+
+This is a Live Zoom Event
+
 Tuesday, June 30, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/0wifGK10m6/instances/enKfM3jWsa/)`,
   },
   {
     name: 'infoSession5',
-    date: new Date('July 7, 2020 03:24:00').getTime(),
+    date: new Date('July 14, 2020 03:24:00').getTime(),
     copy: `${''
 }### New Leaf Restoration - Info Session #5
 
-Tuesday, July 7, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/IgSXels0NP/instances/K0OGnvwidf/)`,
+Tuesday, July 14, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/new-leaf-restoration/event/tqQq7suBGg/?ticketing=1)`
   },
   {
     name: 'infoSession6',
-    date: new Date('July 14, 2020 03:24:00').getTime(),
+    date: new Date('July 21, 2020 03:24:00').getTime(),
     copy: `${''
 }### New Leaf Restoration - Info Session #6
 
-Tuesday, July 14, 7 – 8 p.m. [REGISTER NOW!](https://api.getlocalhop.com/share?instance=TxKMAtBBWE )`
+Tuesday, July 21, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/climate-and-human-impacts-on-hudson-river-marshes-a-presentation-by-dr-dorothy-peteet/event/ZQkhvKEL0h/?ticketing=1)`
   },
+
 ];
 class EventsList extends PureComponent {
   constructor(){
