@@ -103,7 +103,7 @@ Tuesday, June 30, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/
     copy: `${''
 }### New Leaf Restoration - Info Session #5
 
-Tuesday, Tuesday, July 21, 7 – 8 p.m. [REGISTER NOW!](https://api.getlocalhop.com/share?instance=oQgyGHwR9H)`
+Tuesday, July 21, 7 – 8 p.m. [REGISTER NOW!](https://api.getlocalhop.com/share?instance=oQgyGHwR9H)`
   },
 //   {
 //     name: 'infoSession6',
