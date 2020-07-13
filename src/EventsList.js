@@ -103,16 +103,16 @@ Tuesday, June 30, 7 – 8 p.m. [REGISTER NOW!](https://www.jblsafe.com/#/events/
     copy: `${''
 }### New Leaf Restoration - Info Session #5
 
-Tuesday, July 14, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/new-leaf-restoration/event/tqQq7suBGg/?ticketing=1)`
+Tuesday, Tuesday, July 21, 7 – 8 p.m. [REGISTER NOW!](https://api.getlocalhop.com/share?instance=oQgyGHwR9H)`
   },
-  {
-    name: 'infoSession6',
-    date: new Date('July 21, 2020 03:24:00').getTime(),
-    copy: `${''
-}### New Leaf Restoration - Info Session #6
-
-Tuesday, July 21, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/climate-and-human-impacts-on-hudson-river-marshes-a-presentation-by-dr-dorothy-peteet/event/ZQkhvKEL0h/?ticketing=1)`
-  },
+//   {
+//     name: 'infoSession6',
+//     date: new Date('July 21, 2020 03:24:00').getTime(),
+//     copy: `${''
+// }### New Leaf Restoration - Info Session #6
+//
+// Tuesday, July 28, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/climate-and-human-impacts-on-hudson-river-marshes-a-presentation-by-dr-dorothy-peteet/event/ZQkhvKEL0h/?ticketing=1)`
+//   },
 
 ];
 class EventsList extends PureComponent {
@@ -135,6 +135,9 @@ class EventsList extends PureComponent {
     let eventsToUse = eventsNotExpired;
     if (!showAll) {
       eventsToUse = eventsNotExpired[0] ? [eventsNotExpired[0]] : [];
+    }
+    if (!eventsToUse.length){
+      return null;
     }
     return (
       <div className={classes.promoWrap}>
