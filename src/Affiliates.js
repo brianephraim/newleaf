@@ -32,8 +32,10 @@ const Affiliates = ({classes}) => (
         [
           {src:'/images/cornell.jpg',href:'http://putnam.cce.cornell.edu/'},
           {src:'/images/audubon.gif',href:'https://www.putnamhighlandsaudubon.org/'},
+          {src:'/images/pollinator-pathway-logo.jpg',href:'https://www.pollinator-pathway.org/'},
           {src:'/images/butterfield.png',href:'https://butterfieldlibrary.org/'},
-          {src:'/images/desmondfish.jpg',href:'https://desmond-fish-library.square.site/'}
+          {src:'/images/rps-logo-web-small-short.png',href:'https://www.rpssolarpumps.com/'},
+          {src:'/images/desmondfish.jpg',href:'https://desmond-fish-library.square.site/'},
         ].map(({src,href}) => (
           <a
             href={href}

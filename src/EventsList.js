@@ -16,17 +16,36 @@ const styles={
   //   // margin: '0 20px 20px 20px',
   //
   // }
+
+  promoItemWrap: {
+    display:'flex',
+
+    padding: 20,
+    border: `3px solid ${panelBgColor}`,
+    // backgroundColor: panelBgColor,
+    borderRadius: 5,
+    margin: '0 20px 20px 20px',
+    flexDirection:'row',
+    '@media (max-width: 700px)': {
+      flexDirection:'column',
+    },
+  },
+  promoImg: {
+    maxWidth: 297,
+    // height:
+    marginLeft: 30,
+    alignSelf: 'center',
+
+  },
   promoText: {
     flexGrow: 1,
 
     display:'flex',
     flexDirection:'column',
-    padding: 20,
-    border: `3px solid ${panelBgColor}`,
-    // backgroundColor: panelBgColor,
-    borderRadius: 5,
+
+
     position:'relative',
-    margin: '0 20px 20px 20px',
+
     '& a': {
       fontFamily: bodyFontName,
       color:`#4E852C !important`,
@@ -113,6 +132,19 @@ Tuesday, July 21, 7 – 8 p.m. [REGISTER NOW!](https://api.getlocalhop.com/share
 //
 // Tuesday, July 28, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/climate-and-human-impacts-on-hudson-river-marshes-a-presentation-by-dr-dorothy-peteet/event/ZQkhvKEL0h/?ticketing=1)`
 //   },
+  {
+    name: 'infoSession7',
+    date: new Date('July 28, 2020 03:24:00').getTime(),
+    img: '/images/irrigation.jpg',
+    copy: `${''
+  }### New Leaf Restoration Info Session - Topic Solar Pump Irrigation
+
+  Welcome! Zoom Series Registration is required and is live now.  Managed by Butterfield Library.
+
+  Recommend at least 24 hrs in advance. Closes when filled or at 5pm day of event.  Thank you.
+
+  Tuesday, July 28, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/new-leaf-restoration-info-session-topic-solar-pump-irrigation/event/KklHGyEZRm/)`
+  },
 
 ];
 class EventsList extends PureComponent {
@@ -143,15 +175,23 @@ class EventsList extends PureComponent {
       <div className={classes.promoWrap}>
       {
         eventsToUse.map(({
-          name,showMatch,date,copy
+          name,showMatch,date,copy,img
         }) => {
-          return (<Markdown
-            linkTarget={targetBlank}
-            className={classes.promoText}
-            key={name}
-          >
-            {copy}
-          </Markdown>)
+          return (
+            <div className={classes.promoItemWrap} key={name}>
+              <Markdown
+                linkTarget={targetBlank}
+                className={classes.promoText}
+
+              >
+                {copy}
+              </Markdown>
+              {false}
+              {!!img && (
+                <img src={img} className={classes.promoImg} />
+              )}
+            </div>
+          )
         })
       }
       {false && (<MarkdownHideAble
