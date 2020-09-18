@@ -166,8 +166,8 @@ const Homepage = ({classes}) => (
         <div className={classes.column}>
           <Thumbnail
             headline="Location in Garrison"
-            src="/images/redboxSurvey.jpg"
-            href="/images/redboxSurvey.jpg"
+            src="/images/gardenLocation.jpg"
+            href="/images/gardenLocation.jpg"
             openInNewTab
           />
         </div>
