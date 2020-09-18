@@ -28,7 +28,8 @@ const styles = {
     '& h2': {
       fontFamily: headerFontName,
       textDecoration: 'none',
-      fontWeight:'normal'
+      fontWeight:'normal',
+      color:'black',
     },
 
   },
