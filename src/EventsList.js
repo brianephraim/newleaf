@@ -146,19 +146,19 @@ Tuesday, July 21, 7 – 8 p.m. [REGISTER NOW!](https://api.getlocalhop.com/share
   Tuesday, July 28, 7 – 8 p.m. [REGISTER NOW!](https://getlocalhop.com/new-leaf-restoration-info-session-topic-solar-pump-irrigation/event/KklHGyEZRm/)`
   },
 
-  {
-    name: 'infoSession8',
-    date: new Date('October 20, 2020 03:24:00').getTime(),
-    // img: '/images/irrigation.jpg',
-    copy: `${''
-}### Citizen Science: Harnessing the Curiosity of Communities
-
-New Leaf Restoration welcomes environmental and conservation educator Matthew Smetana for a talk and discussion titled Citizen Science: Harnessing the curiosity of communities. Tools and Tips for the citizen scientist.  How to get involved, stay informed and access information.
-
-Hosted by the Desmondfish Public Library and the Julia L Butterfield Library, this project is made possible, in part through Putnam Arts Council's Arts link  grant program with public funds provided through the NY State Council on the Arts support from Governor Andrew M. Cuomo and the NY State Legislature.
-
-Tuesday, October 20, 7 p.m. [REGISTER NOW!](https://bit.ly/DFPLCitizenScience)`
-  },
+//   {
+//     name: 'infoSession8',
+//     date: new Date('October 20, 2020 03:24:00').getTime(),
+//     // img: '/images/irrigation.jpg',
+//     copy: `${''
+// }### Citizen Science: Harnessing the Curiosity of Communities
+//
+// New Leaf Restoration welcomes environmental and conservation educator Matthew Smetana for a talk and discussion titled Citizen Science: Harnessing the curiosity of communities. Tools and Tips for the citizen scientist.  How to get involved, stay informed and access information.
+//
+// Hosted by the Desmondfish Public Library and the Julia L Butterfield Library, this project is made possible, in part through Putnam Arts Council's Arts link  grant program with public funds provided through the NY State Council on the Arts support from Governor Andrew M. Cuomo and the NY State Legislature.
+//
+// Tuesday, October 20, 7 p.m. [REGISTER NOW!](https://bit.ly/DFPLCitizenScience)`
+//   },
 
 ];
 class EventsList extends PureComponent {
