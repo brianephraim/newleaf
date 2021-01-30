@@ -86,6 +86,8 @@ const styles={
   container: {
     display:'flex',
     flexDirection:'column',
+    maxWidth: 1280,
+    margin: '0 auto',
 
   },
   afterHero: {},
@@ -162,6 +164,36 @@ const Homepage = ({classes}) => (
           <Info
             copy="intro"
           />
+          <Thumbnail
+            src="/images/tomatos.jpg"
+            href="/images/tomatos.jpg"
+            openInNewTab
+          />
+          <Info copy="vision" />
+          <Affiliates />
+          <Info copy="gardenAspects" />
+          <Thumbnail
+            src="/images/flowers1.jpg"
+            href="/images/flowers1.jpg"
+            openInNewTab
+          />
+          <Info
+            copy="eradication"
+          />
+          <Thumbnail
+            src="/images/veggies2.jpg"
+            href="/images/veggies2.jpg"
+            openInNewTab
+          />
+          <Info>
+            <SubscribeForm />
+          </Info>
+          <Info copy="email" className="loud" noUnderline />
+          <Thumbnail
+            src="/images/flowers2.jpg"
+            href="/images/flowers2.jpg"
+            openInNewTab
+          />
         </div>
         <div className={classes.column}>
           <Thumbnail
@@ -170,26 +202,19 @@ const Homepage = ({classes}) => (
             href="/images/gardenLocation.jpg"
             openInNewTab
           />
-        </div>
-      </div>
-      <div className={classes.columns}>
-        <div className={classes.column}>
-          <Info copy="vision" />
-          <Affiliates />
-          <Info copy="gardenAspects" />
-          <Info
-            copy="eradication"
-          />
-          <Info>
-            <SubscribeForm />
-          </Info>
-          <Info copy="email" className="loud"/>
-
-        </div>
-        <div className={classes.column}>
           <Info copy="mission" />
+          <Thumbnail
+            src="/images/veggies1.jpg"
+            href="/images/veggies1.jpg"
+            openInNewTab
+          />
           <Info
             copy="council"
+          />
+          <Thumbnail
+            src="/images/group-masked.jpg"
+            href="/images/group-unmasked.jpg"
+            openInNewTab
           />
         </div>
       </div>
@@ -204,25 +229,49 @@ const Homepage = ({classes}) => (
           />
           <Thumbnail
             headline="Location in Garrison"
-            src="/images/redboxSurvey.jpg"
-            href="/images/redboxSurvey.jpg"
+            src="/images/gardenLocation.jpg"
+            href="/images/gardenLocation.jpg"
             openInNewTab
           />
           <Info copy="vision" />
           <Affiliates />
           <Info copy="mission" />
+          <Thumbnail
+            src="/images/flowers1.jpg"
+            href="/images/flowers1.jpg"
+            openInNewTab
+          />
           <Info copy="gardenAspects" />
+          <Thumbnail
+            src="/images/flowers2.jpg"
+            href="/images/flowers2.jpg"
+            openInNewTab
+          />
           <Info
             copy="eradication"
           />
+          <Thumbnail
+            src="/images/veggies1.jpg"
+            href="/images/veggies1.jpg"
+            openInNewTab
+          />
           <Info
             copy="council"
+          />
+          <Thumbnail
+            src="/images/group-masked.jpg"
+            href="/images/group-unmasked.jpg"
+            openInNewTab
           />
           <Info>
             <SubscribeForm />
           </Info>
           <Info copy="email" className="loud"/>
-
+          <Thumbnail
+            src="/images/tomatos.jpg"
+            href="/images/tomatos.jpg"
+            openInNewTab
+          />
         </div>
       </div>
     </div>

@@ -10,14 +10,14 @@ import {
 
 const styles = {
   container: {
-    margin: 20,
+    margin: 0,
     padding:20,
     fontFamily: headerFontName,
-    border: `10px solid rgba(255,255,255,.25)`,
+    // border: `10px solid rgba(255,255,255,.25)`,
     // backgroundColor: panelBgColor,
     display:'flex',
     flexDirection:'column',
-    marginTop: 20,
+    marginTop: 0,
     borderRadius: 5,
     textDecoration:'none',
     color: 'white',
@@ -28,8 +28,9 @@ const styles = {
     '& h2': {
       fontFamily: headerFontName,
       textDecoration: 'none',
-      fontWeight:'normal',
+      fontWeight:'bold',
       color:'black',
+      marginTop: 60,
     },
 
   },

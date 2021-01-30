@@ -77,6 +77,9 @@ const styles = {
         color: linkColor
       },
     },
+    '& hr': {
+      width: '100%',
+    },
   },
   bodyWrap: {
     display:'flex',
@@ -85,7 +88,14 @@ const styles = {
     justifyContent:'space-evenly',
   },
   bold:{fontWeight:'bold'},
-
+  noUnderline: {
+    textDecoration: 'none !important',
+    borderWidth: 20,
+    borderColor: 'red',
+    '& :any-link ': {
+      textDecoration: 'none !important',
+    },
+  }
 };
 
 // styles['@media (min-width: 1024px)'] = {
@@ -97,14 +107,15 @@ const styles = {
 const targetBlank = () => '_blank';
 
 const Info = (props) => {
-  const {copy,classes, className, bodyTextClassName, content, children = null } = props;
+  const {copy,classes, className, bodyTextClassName, content, noUnderline, children = null } = props;
   let {header} = props;
   const {body} = copyDict[copy] || {};
   if (!header && copy){
     header = copyDict[copy].header;
   }
+  console.log('noUnderline',noUnderline,classes.noUnderline);
   return (
-    <div className={[classes.container,classes[className]].join(' ')}>
+    <div className={[classes.container,classes[className],noUnderline && classes.noUnderline].join(' ')}>
       {header && <h2 className={[classes.header].join(' ')}>{header}</h2>}
       {children && (
         <div className={[classes.bodyText,classes[bodyTextClassName]].join(' ')}>
@@ -114,7 +125,7 @@ const Info = (props) => {
       {copy && (
         <Markdown
           linkTarget={targetBlank}
-          className={[classes.bodyText,classes[bodyTextClassName]].join(' ')}
+          className={[classes.bodyText].join(' ')}
         >
           {body}
         </Markdown>
