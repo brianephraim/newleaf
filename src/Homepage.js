@@ -13,6 +13,7 @@ import './reset.css';
 import injectSheet from 'react-jss';
 import SubscribeForm from './SubscribeForm';
 import Affiliates from './Affiliates';
+import PageLayout from './PageLayout'
 import {
   headerFontName,
   bodyFontName,
@@ -149,15 +150,7 @@ const styles={
 
 
 const Homepage = ({classes}) => (
-  <div className={classes.container}>
-    <SEO />
-    <div className={classes.headerLogoWrap}>
-      <img src={'/images/headerlogo.png'} className={classes.headerLogo} />
-      <p className={classes.headerText}>Philipstown Community Gardens</p>
-      <p className={classes.headerText}>Garrison, NY</p>
-    </div>
-    <img src={'/images/widePhoto.jpg'} className={classes.hero} />
-    <EventsList />
+  <PageLayout>
     <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
       <div className={classes.columns}>
         <div className={classes.column}>
@@ -275,8 +268,7 @@ const Homepage = ({classes}) => (
         </div>
       </div>
     </div>
-    <div className={classes.footer} />
-  </div>
+  </PageLayout>
 )
 
 export default injectSheet(styles)(Homepage)
