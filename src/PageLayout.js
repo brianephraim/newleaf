@@ -51,6 +51,7 @@ const styles={
     justifyContent: 'space-between',
     alignSelf: 'center',
     minHeight: '100%',
+    margin: '0 auto',
 
   },
   afterHero: {},
