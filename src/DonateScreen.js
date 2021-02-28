@@ -1,6 +1,7 @@
-import React from "react"
+import React, {Component} from "react"
 import { Link } from "gatsby"
 import { loadStripe } from '@stripe/stripe-js';
+import Markdown from 'react-markdown';
 import injectSheet from 'react-jss';
 import PageLayout from './PageLayout'
 import {
@@ -9,8 +10,21 @@ import {
   panelBgColor,
   linkColor,
 } from './constants';
+import stripePrices from './stripePrices';
+import StripeButton from './StripeButton';
 
-const stripePromise = loadStripe('pk_test_51IF7JME2xIv2JZiGS0bqQAFngU8y9lHwu0rZbb61OawS1uavaU97o1iFBoAhfUf1ej78ocOQ9YFLo0OPA2JdkUBP00Mh0hdI8E');
+
+console.log('stripePrices',stripePrices);
+
+
+
+function splitPricesIntoColumnArrays(originalArray){
+  const tens = originalArray.filter(([amt]) => amt < 100);
+  const hundreds = originalArray.filter(([amt]) => amt > 99 && amt < 1000);
+  const thousands = originalArray.filter(([amt]) => amt > 999);
+  return [tens,hundreds,thousands];
+}
+
 
 const styles={
   container: {
@@ -56,185 +70,90 @@ const styles={
   column: {
 
   },
+  body: {
+    maxWidth: 800,
+    margin: '0 30px',
+  },
+  checkboxSection: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: '#ccc',
+    padding: 20,
+  },
+  checkboxArea: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems:'center',
+    justifyContent: 'center',
+    backgroundColor: '#aaa',
+    padding: 20,
+  },
+  purchaseButton: {
+    display: 'block',
+    backgroundColor: '#009933',
+    color: 'white',
+    border: 'none',
+    fontFamily: bodyFontName,
+    margin: '7px 15px',
+    padding: '7px 20px',
+    // width: 90,
+    cursor: 'pointer',
+  },
+};
+
+styles.purchaseButtonInactive = {
+  ...styles.purchaseButton,
+  backgroundColor: '#999',
 };
 
 
-const DonateButton_notConnected = ({classes,amount,stripeId}) => {
-  const handleClick = async (event) => {
-    // When the customer clicks on the button, redirect them to Checkout.
-    const stripe = await stripePromise;
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: [{
-        price: stripeId, // Replace with the ID of your price
-        quantity: 1,
-      }],
-      mode: 'payment',
-      successUrl: 'https://example.com/success',
-      cancelUrl: 'https://example.com/cancel',
-    });
-    // If `redirectToCheckout` fails due to a browser or network
-    // error, display the localized error message to your customer
-    // using `error.message`.
+
+class PurchaseScreen extends Component {
+  state = {};
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({checked: value});
   };
-  return (
-    <button
-      role="link"
-      className={classes.donateButton}
-      onClick={handleClick}
-    >
-      {`$${amount.toLocaleString()}`}
-    </button>
-  );
-};
-const DonateButton =injectSheet(styles)(DonateButton_notConnected);
+  render(){
+    const {classes} = this.props;
+    const isDev = window.location.search.includes('env=dev');
+    const env = isDev ? 'dev' : 'prod';
+    const plotPurchase = stripePrices[env].purchase[0];
+    const pricesAsColumns = splitPricesIntoColumnArrays(stripePrices[env].donate);
+    return (
+      <PageLayout>
+        <div className={classes.container}>
+          <h2 className={classes.h2}>Donate to New Leaf Restoration</h2>
+          <div className={classes.columns}>
+            {
+              pricesAsColumns.map((column,index) => {
+                console.log('column',column)
+                return (
+                  <div className={classes.column} key={index}>
+                    {
+                      column.map(([amount,stripeId]) => {
+                        return (
+                          <StripeButton
+                            key={stripeId}
+                            amount={amount}
+                            stripeId={stripeId}
 
-const DonateScreen = ({classes}) => {
-
-
-  return (
-    <PageLayout>
-      <div className={classes.container}>
-        <h2 className={classes.h2}>Donate to New Leaf Restoration</h2>
-        <div className={classes.columns}>
-          {
-            [
-              [
-                {
-                  amount: 10,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 20,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 30,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 40,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 50,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 60,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 70,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 80,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 90,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-              ],
-              [
-                {
-                  amount: 100,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 200,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 300,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 400,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 500,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 600,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 700,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 800,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 900,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-              ],
-              [
-                {
-                  amount: 1000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 2000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 3000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 4000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 5000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 6000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 7000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 8000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-                {
-                  amount: 9000,
-                  stripeId: 'price_1IF7KFE2xIv2JZiG6LzrSRFy',
-                },
-              ],
-            ].map((column) => {
-              console.log('column',column)
-              return (
-                <div className={classes.column}>
-                  {
-                    column.map(({amount,stripeId}) => {
-                      return (
-                        <DonateButton
-                          amount={amount}
-                          stripeId={stripeId}
-                        />
-                      );
-                    })
-                  }
-                </div>
-              );
-            })
-          }
+                          />
+                        );
+                      })
+                    }
+                  </div>
+                );
+              })
+            }
+          </div>
+          <a href="/" className={classes.homepageLink}>Go back to the homepage</a>
         </div>
-        <a href="/" className={classes.homepageLink}>Go back to the homepage</a>
-      </div>
-    </PageLayout>
-  );
-};
+      </PageLayout>
+    );
+  }
+}
 
-export default injectSheet(styles)(DonateScreen);
+export default injectSheet(styles)(PurchaseScreen);
