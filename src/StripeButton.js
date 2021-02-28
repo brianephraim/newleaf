@@ -73,7 +73,6 @@ function getStripePromise(env){
 const DonateButton_notConnected = ({classes,amount,stripeId,active = true,inactiveMessage, className, classNameInactive, prefix = '$'}) => {
   const isDev = window.location.search.includes('env=dev');
   const env = isDev ? 'dev' : 'prod';
-  console.log('env',env);
   getStripePromise(env);
   const handleClick = async (event) => {
     if (!active){
@@ -85,7 +84,6 @@ const DonateButton_notConnected = ({classes,amount,stripeId,active = true,inacti
     // When the customer clicks on the button, redirect them to Checkout.
     try {
       const stripe = await getStripePromise(env);
-      console.log('stripe',stripe);
       const urlPrefix = `${window.location.protocol}//${window.location.host}`
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{

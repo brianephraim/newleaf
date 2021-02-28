@@ -14,7 +14,6 @@ import stripePrices from './stripePrices';
 import StripeButton from './StripeButton';
 
 
-console.log('stripePrices',stripePrices);
 
 
 
@@ -109,7 +108,7 @@ styles.purchaseButtonInactive = {
 
 
 
-class PurchaseScreen extends Component {
+class DonateScreen extends Component {
   state = {};
   handleInputChange = (event) => {
     const target = event.target;
@@ -129,7 +128,6 @@ class PurchaseScreen extends Component {
           <div className={classes.columns}>
             {
               pricesAsColumns.map((column,index) => {
-                console.log('column',column)
                 return (
                   <div className={classes.column} key={index}>
                     {
@@ -156,4 +154,19 @@ class PurchaseScreen extends Component {
   }
 }
 
-export default injectSheet(styles)(PurchaseScreen);
+
+const DonateScreenPrepared = injectSheet(styles)(DonateScreen);
+
+class DonateScreenWrapped extends Component {
+  state = {};
+  componentDidMount(){
+    this.setState({
+      ready: true,
+    });
+  }
+  render(){
+    return this.state.ready ? <DonateScreenPrepared /> : null;
+  }
+}
+
+export default DonateScreenWrapped;

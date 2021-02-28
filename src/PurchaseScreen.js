@@ -14,9 +14,6 @@ import stripePrices from './stripePrices';
 import StripeButton from './StripeButton';
 
 
-console.log('stripePrices',stripePrices);
-
-
 
 function splitPricesIntoColumnArrays(originalArray){
   const tens = originalArray.filter(([amt]) => amt < 100);
@@ -159,7 +156,6 @@ class PurchaseScreen extends Component {
         body: JSON.stringify({zxcv:1234})
       })
       .then(r => r.json());
-      console.log('plot status',data);
       const {current, max} = data;
       if (current >= max) {
         this.setState({
@@ -242,4 +238,18 @@ class PurchaseScreen extends Component {
   }
 }
 
-export default injectSheet(styles)(PurchaseScreen);
+const PurchaseScreenPrepared = injectSheet(styles)(PurchaseScreen);
+
+class PurchaseScreenWrapped extends Component {
+  state = {};
+  componentDidMount(){
+    this.setState({
+      ready: true,
+    });
+  }
+  render(){
+    return this.state.ready ? <PurchaseScreenPrepared /> : null;
+  }
+}
+
+export default PurchaseScreenWrapped;

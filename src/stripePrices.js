@@ -118,7 +118,7 @@ const stripePrices = {
     ],
   },
   prod: {
-    donation: [
+    donate: [
       [
         10,
         "price_1IPwSyFFFbyANGwC11jkkKes"
