@@ -148,7 +148,7 @@ class PurchaseScreen extends Component {
   checkAvailable = async () => {
     const isDev = window.location.search.includes('env=dev');
     const env = isDev ? 'dev' : 'prod';
-    const url = `https://us-central1-newleaf-306116.cloudfunctions.net/stripe-inventory-24?purpose=status&env=${env}`;
+    const url = `https://us-central1-newleaf-306116.cloudfunctions.net/stripe-inventory-26?purpose=status&env=${env}`;
     try {
       const data = await fetch(url,{
         method: 'POST',
@@ -192,10 +192,13 @@ class PurchaseScreen extends Component {
           <a href="/" className={classes.homepageLink}>Go back to the homepage</a>
           <h2 className={classes.h2}>Reserve a plot at New Leaf Restoration</h2>
           {
-            !this.state.showPage && (
-              <p> loading... </p>
+            !this.state.showPage && !this.state.checkAvailableError && (
+              <p> loading...</p>
             )
           }
+          {!!this.state.checkAvailableError && (
+            <p>{this.state.checkAvailableError}</p>
+          )}
 
           {
             !!this.state.showPage && (
