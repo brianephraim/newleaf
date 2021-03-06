@@ -211,22 +211,22 @@ const stripePrices = {
         5000,
         "price_1IPwSyFFFbyANGwC2ZZgTYAr"
       ],
-      [
-        6000,
-        "price_1IPwSyFFFbyANGwCtvxjFCoG"
-      ],
-      [
-        7000,
-        "price_1IPwSyFFFbyANGwCvvIjfirj"
-      ],
-      [
-        8000,
-        "price_1IPwSyFFFbyANGwCRopHirvz"
-      ],
-      [
-        9000,
-        "price_1IPwSyFFFbyANGwCpEwiWd5A"
-      ],
+      // [
+      //   6000,
+      //   "price_1IPwSyFFFbyANGwCtvxjFCoG"
+      // ],
+      // [
+      //   7000,
+      //   "price_1IPwSyFFFbyANGwCvvIjfirj"
+      // ],
+      // [
+      //   8000,
+      //   "price_1IPwSyFFFbyANGwCRopHirvz"
+      // ],
+      // [
+      //   9000,
+      //   "price_1IPwSyFFFbyANGwCpEwiWd5A"
+      // ],
     ],
     purchase: [
       [

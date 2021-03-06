@@ -147,6 +147,7 @@ class DonateScreen extends Component {
               })
             }
           </div>
+          <p>If you have any problems, email info@newleaf-restoration.org</p>
           <a href="/" className={classes.homepageLink}>Go back to the homepage</a>
         </div>
       </PageLayout>
