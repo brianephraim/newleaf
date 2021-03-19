@@ -112,30 +112,52 @@ styles.purchaseButtonInactive = {
 const rulesText = `
 ## NEW LEAF RESTORATION GARDEN RULES
 
-Welcome to the New Leaf Restoration Garden. The following rules are in place so the garden can provide a healthy community atmosphere and function as a pleasant place to garden, enjoy nature, and share knowledge. Your adherence to these rules will help everyone have an enjoyable and productive garden season. All members are required to sign an agreement of rules as well as a liability release waiver and will receive a copy of same.
+Welcome to the New Leaf Restoration Garden. Please read carefully the following information and rules, which have been designed to ensure that the garden is a safe, pleasant, and inviting place. Thank you!
 
-1. The garden is open dawn to dusk to members only, 7 days a week from the opening date.  Friends and family may enter only when accompanied by a garden member.
-1. Members will be issued a combination for the lock on the gate.  Do not share that combination with anyone.  New combinations will be issued in subsequent years. Keep the gate shut when entering and locked when leaving. (WE NEED TO ADDRESS THIS TOPIC (POSSIBLY NOT IN THIS ITERATION OF THE RULES)
-1. No smoking.
-1. No alcohol or illegal substances.
-1. The application of herbicides is prohibited.
+1. Garden plots are 10’ x 4.’ Cost for the 2021 season is $100 per plot.
+
+1. The garden is open from dawn to dusk, seven days a week, from date on which the garden opens for the season (TBD) through to Thanksgiving.
+
+1. Water and soaker hoses will be provided and set up for each plot with timers. Watering cans for watering seeds and plants at the time of planting will be provided at the communal spigot.
+
 1. The use of pesticides will be limited to supplied organic products only.
-1. Be respectful of other members’ plots. Always use pathways. Do not step into members’ plots as a shortcut to your own.
-1. Do not harvest other gardeners’ fruits or vegetables without their permission.
-1. Children must be supervised at all times.  Please refrain from allowing children to run through the garden or damage other members’ plants.
-1. Permanent structures are not permitted in plots.
-1. Members should be mindful to not shade another’s plot with tall or staked plants such as sunflowers, pole beans, etc.
-1. Weedy crops such as fennel, mints, etc., should not be planted.
-1. Water and soaker hoses will be set up for each plot will be provided, with timers. Watering cans for watering in seeds and plants at the time of planting will be provided at the communal spigot. No hoses will be allowed.
+
+1. Tools will not be provided; gardeners are responsible for supplying their own tools.
+
+1. Please do not leave tools, bags, garbage, etc., in or around your plot when you leave; take all items with you when you leave the garden.
+
+1. Please be respectful of other members’ plots. Always use pathways. Do not step into members’ plots.
+
+1. Members should be mindful to avoid shading other members’ plots with tall or staked plants, i.e., sunflowers, pole beans, etc.
+
+1. Garden plots should be weeded and maintained throughout the season. If you are unable to care for your plot for the entire season, please email a notification to info@newleaf-restoration.org so that your plot can be made available to another member.
+
+1. If you will be unable to tend to your plot for three weeks or more during the season, you may arrange for another member to care for your plot while you are away.
+
+1. Members will be issued a combination for the lock on the main garden entrance gate. This combination must not be shared with anyone. Combinations will be changed annually.
+
+1. Please close the gate after entering the garden and be sure it is locked when you leave the garden.
+
+1. Members should immediately report any theft, vandalism, or maintenance issues to info@newleaf-restoration.org.
+
+
+The following rules are in place so that our garden is a pleasant place to garden, enjoy nature, and share knowledge—and one which provides a healthy community atmosphere. Your adherence to these rules will help ensure that all gardeners have an enjoyable and productive gardening season.
+
+1. The garden is open to members only, Friends and family may enter only when accompanied by a garden member.
+1. Children must be supervised in the garden at all times. Please do not allow children to run through the garden or damage other members’ plants.
+1. Pets are not permitted in the garden.
+1. No smoking, alcohol, or illegal substances are permitted in the garden.
+1. The application of herbicides is prohibited.
+1. Weedy plants, i.e., fennel, mints, etc. must not be planted.
 1. Only composted manure is permitted.
-1. Garden plots should be maintained throughout the season. If you are unable to care for your plot, please send a notification to our website so that your plot can be reassigned.
-1. Keep your plot weeded.
-1. Send a notification to the website if you will be absent for an extended period of time (3 weeks or more). You may arrange with another member to care for your plot while you’re gone.
-1. Tools will not be provided. Gardeners are responsible for supplying their own tools.
-1. Please do not leave tools, bags, garbage, etc., in or around your plot after you leave. Take all items back home with you at the end of the day.
-1. By Thanksgiving, gardeners are responsible for cleaning all plant material from their plots and disposing of this material in the compost pile. The exception to this rule is for members who are planting winter crops.
-1. Any theft, vandalism or maintenance problems should be reported immediately to XXXXX.
-1. Any gardener failing to abide by these rules will be sent up to of two notices outlining the details of the problem along with a deadline for fixing the problem. If the member does not correct the issue, they risk forfeiture of their plot(s), the loss of future gardening privileges at the community garden as well as forfeiture of any fees paid.
+1. No additional hoses will be allowed.
+1. Permanent structures are not permitted in garden plots.
+1. Do not harvest other gardeners’ fruits or vegetables without their permission.
+1. Gardeners are responsible for removing all plant material from their plots and disposing of it in the compost pile by no later than Thanksgiving. The exception to this expectation is members who are planting winter crops.
+
+Any gardener failing to abide by these rules will be sent up to two notices identifying the nature of the issue(s), along with a date by which the issue(s) should be resolved. If the gardener fails to correct said issue, they risk forfeiture of their plot(s), the loss of future gardening privileges at the community garden, and forfeiture of any fees paid.
+
+
 `;
 
 class PurchaseScreen extends Component {
@@ -148,7 +170,7 @@ class PurchaseScreen extends Component {
   checkAvailable = async () => {
     const isDev = window.location.search.includes('env=dev');
     const env = isDev ? 'dev' : 'prod';
-    const url = `https://us-central1-newleaf-306116.cloudfunctions.net/stripe-inventory-26?purpose=status&env=${env}`;
+    const url = `https://us-central1-newleaf-306116.cloudfunctions.net/stripe-inventory-27?purpose=status&env=${env}`;
     try {
       const data = await fetch(url,{
         method: 'POST',
@@ -190,7 +212,7 @@ class PurchaseScreen extends Component {
       <PageLayout>
         <div className={classes.container}>
           <a href="/" className={classes.homepageLink}>Go back to the homepage</a>
-          <h2 className={classes.h2}>Reserve a plot at New Leaf Restoration</h2>
+          <h2 className={classes.h2}>Lease a plot at New Leaf Restoration</h2>
           {
             !this.state.showPage && !this.state.checkAvailableError && (
               <p> loading...</p>
@@ -209,7 +231,7 @@ class PurchaseScreen extends Component {
                 >{rulesText}</Markdown>
                 <div className={classes.checkboxSection}>
                   <p>
-                    By checking the box below, you agree to the above rules and regulations and understand that New Leaf Restoration is not responsible for your actions.  You relinquish New Leaf Restoration from any liability, damage, loss or claim that occurs in connection with the use of the garden by you or any of your guests as you are the sole person responsible for your plot.
+                    By checking the box below and completing the purchse, agree to the above rules and regulations and understand that New Leaf Restoration, Inc. is not responsible for your actions. You hereby relinquish New Leaf Restoration, Inc. from any liability, damage, loss, or claim that occurs in connection with the use of the garden by me or any of my guests, as you are solely responsible for your plot.
                   </p>
                   <div className={classes.checkboxArea}>
                     <div className={classes.checkboxWrap}>
@@ -221,7 +243,7 @@ class PurchaseScreen extends Component {
                     </div>
                     <StripeButton
                       prefix={''}
-                      amount={'Pay to reserve your plot'}
+                      amount={'Pay to lease your plot'}
                       stripeId={plotPurchase[1]}
                       active={!!this.state.checked}
                       inactiveMessage={'Click the checkbox to agree to the rules.'}

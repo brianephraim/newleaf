@@ -61,6 +61,7 @@ const DonateScreen = ({classes}) => {
       <div className={classes.container}>
         <h2 className={classes.h2}>Payment received!</h2>
         <p>Check you email for a receipt.</p>
+        <p>Check your email in the coming days for more information about accessing your plot and getting involved.</p>
         <p>If you have any problems, email info@newleaf-restoration.org</p>
         <a href="/" className={classes.homepageLink}>Go back to the homepage</a>
       </div>

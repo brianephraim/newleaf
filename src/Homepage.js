@@ -60,7 +60,12 @@ governance
 team
 outro
 */
+const purchaseLink = {
+  textDecoration: 'none',
+  color: 'white',
+  backgroundColor: linkColor,
 
+};
 const styles={
   headerLogoWrap: {
     margin:'80px 80px 20px 80px',
@@ -145,13 +150,48 @@ const styles={
       order:99,
     },
   },
+  purchaseLinkWrap: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  purchaseLink: {
+    display: 'flex',
+    alignSelf: 'center',
+    fontFamily: 'Sansita One',
+    fontSize: 30,
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingLeft: 30,
+    paddingRight: 30,
+    borderRadius: 10,
+    borderColor: '#216939',
+    borderWidth: 12,
+    borderStyle: 'solid',
+    textAlign: 'center',
+    ...purchaseLink,
+
+    '&:hover': {
+      ...purchaseLink,
+      opacity: .9,
+    },
+    '&:visited': {
+      ...purchaseLink
+    },
+    '&:active': {
+      ...purchaseLink
+    },
+  },
 
 };
 
 
 const Homepage = ({classes}) => (
   <PageLayout>
+
     <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
+      <div className={classes.purchaseLinkWrap}>
+        <a href="/purchase" className={classes.purchaseLink}>Click here to LEASE A GARDEN PLOT</a>
+      </div>
       <div className={classes.columns}>
         <div className={classes.column}>
           <Info
@@ -215,6 +255,9 @@ const Homepage = ({classes}) => (
 
 
     <div className={[classes.afterHero,classes.hideWhenWide].join(' ')}>
+      <div className={classes.purchaseLinkWrap}>
+        <a href="/purchase" className={classes.purchaseLink}>Click here to LEASE A GARDEN PLOT</a>
+      </div>
       <div className={classes.columns}>
         <div className={classes.column}>
           <Info

@@ -26,10 +26,50 @@ const styles={
     margin:'80px 80px 20px 80px',
     alignSelf:'stretch',
   },
-  headerLogo: {
-    width:'100%',
+  headerImages: {
+    display: 'flex',
+    alignItems: 'center',
     marginBottom:20,
   },
+
+  headerBadgeLogo: {
+    width: '15%',
+  },
+  headerTextLogo: {
+    width:'80%',
+  },
+  headerLogoSpacer: {
+    width:'2%',
+  },
+  '@media (max-width: 850px)': {
+    headerBadgeLogo: {
+      width: '20%',
+    },
+    headerTextLogo: {
+      width:'70%',
+    },
+    headerLogoSpacer: {
+      width:'5%',
+    },
+  },
+  '@media (max-width: 525px)': {
+    headerImages: {
+      flexDirection: 'column',
+      marginBottom:20,
+    },
+    headerBadgeLogo: {
+      width: 120,
+      height: 120,
+      marginBottom:30,
+    },
+    headerTextLogo: {
+      width:'100%',
+    },
+    headerLogoSpacer: {
+      display: 'none',
+    },
+  },
+
   headerText: {
     marginTop:10,
     fontFamily: 'Sansita One',
@@ -109,6 +149,7 @@ const styles={
     },
   },
 
+
 };
 
 
@@ -117,7 +158,11 @@ const PageLayout = ({classes,children}) => (
     <div>
       <SEO title="New Leaf Restoration"/>
       <div className={classes.headerLogoWrap}>
-        <img src={'/images/headerlogo.png'} className={classes.headerLogo} />
+        <div className={classes.headerImages}>
+          <img src={'/images/newleaf-logo.png'} className={classes.headerBadgeLogo} />
+          <div className={classes.headerLogoSpacer} />
+          <img src={'/images/headerlogo.png'} className={classes.headerTextLogo} />
+        </div>
         <p className={classes.headerText}>Philipstown Community Gardens</p>
         <p className={classes.headerText}>Garrison, NY</p>
       </div>
