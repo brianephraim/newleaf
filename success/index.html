@@ -10,24 +10,62 @@
   margin: 80px 80px 20px 80px;
   align-self: stretch;
 }
-.PageLayout-headerLogo-0-2-9 {
-  width: 100%;
+.PageLayout-headerImages-0-2-9 {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
-.PageLayout-headerText-0-2-10 {
-  color: #4E852C;
-  font-size: 30px;
-  margin-top: 10px;
-  text-align: center;
-  font-family: Sansita One;
-  text-shadow: 0px 1px 5px white;
+.PageLayout-headerBadgeLogo-0-2-10 {
+  width: 15%;
 }
+.PageLayout-headerTextLogo-0-2-11 {
+  width: 80%;
+}
+.PageLayout-headerLogoSpacer-0-2-12 {
+  width: 2%;
+}
+@media (max-width: 850px) {
+  .PageLayout-headerBadgeLogo-0-2-10 {
+    width: 20%;
+  }
+  .PageLayout-headerTextLogo-0-2-11 {
+    width: 70%;
+  }
+  .PageLayout-headerLogoSpacer-0-2-12 {
+    width: 5%;
+  }
+}
+@media (max-width: 525px) {
+  .PageLayout-headerImages-0-2-9 {
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .PageLayout-headerBadgeLogo-0-2-10 {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+  .PageLayout-headerTextLogo-0-2-11 {
+    width: 100%;
+  }
+  .PageLayout-headerLogoSpacer-0-2-12 {
+    display: none;
+  }
+}
+  .PageLayout-headerText-0-2-13 {
+    color: #4E852C;
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Sansita One;
+    text-shadow: 0px 1px 5px white;
+  }
 @media (max-width: 500px) {
-  .PageLayout-headerText-0-2-10 {
+  .PageLayout-headerText-0-2-13 {
     font-size: 20px;
   }
 }
-  .PageLayout-container-0-2-11 {
+  .PageLayout-container-0-2-14 {
     margin: 0 auto;
     display: flex;
     max-width: 1280px;
@@ -36,20 +74,20 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .PageLayout-columns-0-2-13 {
+  .PageLayout-columns-0-2-16 {
     display: flex;
     flex-direction: row;
   }
-  .PageLayout-column-0-2-14 {
+  .PageLayout-column-0-2-17 {
     width: 50%;
     display: flex;
     flex-direction: column;
   }
-  .PageLayout-hero-0-2-15 {
+  .PageLayout-hero-0-2-18 {
     width: 100%;
     margin-bottom: 30px;
   }
-  .PageLayout-logosWrap-0-2-16 {
+  .PageLayout-logosWrap-0-2-19 {
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
@@ -58,32 +96,32 @@
     justify-content: space-evenly;
     background-color: white;
   }
-  .PageLayout-logoItem-0-2-17 {
+  .PageLayout-logoItem-0-2-20 {
     display: block;
     max-height: 152px;
   }
-  .PageLayout-footer-0-2-18 {
+  .PageLayout-footer-0-2-21 {
     height: 100px;
     align-self: stretch;
     background-color: rgba(0,0,0,0.75);
   }
-  .PageLayout-hideWhenWide-0-2-20 {
+  .PageLayout-hideWhenWide-0-2-23 {
     display: none;
   }
 @media (max-width: 725px) {
   .PageLayout-headerLogoWrap-0-2-8 {
     margin: 20px;
   }
-  .PageLayout-hideWhenNarrow-0-2-19 {
+  .PageLayout-hideWhenNarrow-0-2-22 {
     display: none;
   }
-  .PageLayout-column-0-2-14 {
+  .PageLayout-column-0-2-17 {
     width: auto;
   }
-  .PageLayout-hideWhenWide-0-2-20 {
+  .PageLayout-hideWhenWide-0-2-23 {
     display: block;
   }
-  .PageLayout-orderLastWhenNarrow-0-2-21 {
+  .PageLayout-orderLastWhenNarrow-0-2-24 {
     order: 99;
   }
 }
@@ -128,4 +166,4 @@
   .DonateScreen-columns-0-2-6 {
     flex-direction: column;
   }
-}</style><link href="https://fonts.googleapis.com/css?family=Sansita+One|Kameron:300,400,400i,700&amp;display=swap" rel="stylesheet"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/webpack-runtime-19408119e748cc236572.js"/><link as="script" rel="preload" href="/app-6aa8fda31a18b53c5c63.js"/><link as="script" rel="preload" href="/commons-9e9e0d6c5855d6072f3c.js"/><link as="script" rel="preload" href="/component---src-pages-success-js-69b9917f97382c36b44f.js"/><link as="fetch" rel="preload" href="/page-data/success/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="PageLayout-container-0-2-11"><div><div class="PageLayout-headerLogoWrap-0-2-8"><img src="/images/headerlogo.png" class="PageLayout-headerLogo-0-2-9"/><p class="PageLayout-headerText-0-2-10">Philipstown Community Gardens</p><p class="PageLayout-headerText-0-2-10">Garrison, NY</p></div><img src="/images/widePhoto.jpg" class="PageLayout-hero-0-2-15"/><div class="DonateScreen-container-0-2-1"><h2 class="DonateScreen-h2-0-2-3">Payment received!</h2><p>Check you email for a receipt.</p><p>If you have any problems, email info@newleaf-restoration.org</p><a href="/" class="DonateScreen-homepageLink-0-2-2">Go back to the homepage</a></div></div><div class="PageLayout-footer-0-2-18"></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/success/";window.webpackCompilationHash="4d31a0e4c76187846933";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-6aa8fda31a18b53c5c63.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c1f30f0776b6738d9b96.js"],"component---src-pages-cancel-js":["/component---src-pages-cancel-js-aa41405c8cf8bfd95e35.js"],"component---src-pages-donate-js":["/component---src-pages-donate-js-207753a1dd2730ab93c1.js"],"component---src-pages-events-js":["/component---src-pages-events-js-691203183b35689d76e5.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4255fdafcc1813cb8e34.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-19e4d8484617983ce2d6.js"],"component---src-pages-purchase-js":["/component---src-pages-purchase-js-52681e3fca31ec8a000b.js"],"component---src-pages-success-js":["/component---src-pages-success-js-69b9917f97382c36b44f.js"]};/*]]>*/</script><script src="/component---src-pages-success-js-69b9917f97382c36b44f.js" async=""></script><script src="/commons-9e9e0d6c5855d6072f3c.js" async=""></script><script src="/app-6aa8fda31a18b53c5c63.js" async=""></script><script src="/webpack-runtime-19408119e748cc236572.js" async=""></script></body></html>
+}</style><link href="https://fonts.googleapis.com/css?family=Sansita+One|Kameron:300,400,400i,700&amp;display=swap" rel="stylesheet"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/webpack-runtime-39e89aa14e7eb53e58a9.js"/><link as="script" rel="preload" href="/app-6aa8fda31a18b53c5c63.js"/><link as="script" rel="preload" href="/commons-199a8beedf7bcadc79ab.js"/><link as="script" rel="preload" href="/component---src-pages-success-js-d8a7bfd23817a6a13f28.js"/><link as="fetch" rel="preload" href="/page-data/success/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="PageLayout-container-0-2-14"><div><div class="PageLayout-headerLogoWrap-0-2-8"><div class="PageLayout-headerImages-0-2-9"><img src="/images/newleaf-logo.png" class="PageLayout-headerBadgeLogo-0-2-10"/><div class="PageLayout-headerLogoSpacer-0-2-12"></div><img src="/images/headerlogo.png" class="PageLayout-headerTextLogo-0-2-11"/></div><p class="PageLayout-headerText-0-2-13">Philipstown Community Gardens</p><p class="PageLayout-headerText-0-2-13">Garrison, NY</p></div><img src="/images/widePhoto.jpg" class="PageLayout-hero-0-2-18"/><div class="DonateScreen-container-0-2-1"><h2 class="DonateScreen-h2-0-2-3">Payment received!</h2><p>Check you email for a receipt.</p><p>Check your email in the coming days for more information about accessing your plot and getting involved.</p><p>If you have any problems, email info@newleaf-restoration.org</p><a href="/" class="DonateScreen-homepageLink-0-2-2">Go back to the homepage</a></div></div><div class="PageLayout-footer-0-2-21"></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/success/";window.webpackCompilationHash="aa6be8102c271d422caa";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-6aa8fda31a18b53c5c63.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c1f30f0776b6738d9b96.js"],"component---src-pages-cancel-js":["/component---src-pages-cancel-js-aa41405c8cf8bfd95e35.js"],"component---src-pages-donate-js":["/component---src-pages-donate-js-207753a1dd2730ab93c1.js"],"component---src-pages-events-js":["/component---src-pages-events-js-691203183b35689d76e5.js"],"component---src-pages-index-js":["/component---src-pages-index-js-0c09a09bd3c81b4b97c9.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-19e4d8484617983ce2d6.js"],"component---src-pages-purchase-js":["/component---src-pages-purchase-js-4faec2199e2cbde65239.js"],"component---src-pages-success-js":["/component---src-pages-success-js-d8a7bfd23817a6a13f28.js"]};/*]]>*/</script><script src="/component---src-pages-success-js-d8a7bfd23817a6a13f28.js" async=""></script><script src="/commons-199a8beedf7bcadc79ab.js" async=""></script><script src="/app-6aa8fda31a18b53c5c63.js" async=""></script><script src="/webpack-runtime-39e89aa14e7eb53e58a9.js" async=""></script></body></html>
