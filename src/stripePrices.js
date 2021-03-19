@@ -113,7 +113,7 @@ const stripePrices = {
     purchase: [
       [
         1,
-        "price_1IPUbQFFFbyANGwCybdmtP95"
+        "price_1IWneUFFFbyANGwC90mWBRcm"
       ],
     ],
   },
@@ -231,7 +231,7 @@ const stripePrices = {
     purchase: [
       [
         1,
-        "price_1IPwXKFFFbyANGwCsIEf0HoH"
+        "price_1IWopKFFFbyANGwCibJNrsdn"
       ]
     ],
   },
