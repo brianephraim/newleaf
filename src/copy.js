@@ -35,7 +35,7 @@ body: `Below are some of the ideas we are exploring for the community garden
 
 eradication: {
 header: `Invasive Species – Eradication`,
-body: `The pasture has substantial invasive species including multiflora rose, black swallow wort, and others.  As a first order of business **New Leaf** will take an inventory of habitat and invasive species. In consultation with professionals and relevant agencies the Invasive species Team will propose a plan to the Town Board using best practices to eradicate invasives and restore organic agriculture.`
+body: `The pasture itself has substantial invasive species including multuflora rose and black swallowwort. The periphery of the field has been colonized by oriental bittersweet, japanese barberry, multiflora rose, wineberry, as well as black swallowwort. As a first order of business New Leaf will take an inventory of habitat and invasives. In consultation with professionals and relevant agencies the Invasive species Team will propose a plan to the Town Board using best practices to control invasives and restore native flora.`
 },
 
 // --
@@ -102,11 +102,8 @@ Tim has been involved with local initiatives which support an active, healthy an
 ---
 
 **Grace Kennedy** is a garden designer and painter who has lived and worked in Philipstown for nearly 30 years. Her work in the community has included many vegetable and herb gardens, along with water conservation and invasive mitigation.
-
 As a long-time member of the Philipstown Garden Club and former chair of the Boscobel Herb Garden, she and her team redesigned and rebuilt the garden in 1998.
-
 Grace’s own gardens have been featured in Martha Stewart Living, the Wall Street Journal, and Gardenista, and several of the gardens she has built have been included on Garden Conservancy Society of Fellows garden-study tours.
-
 She and her husband are also members of the Buster Levi Gallery in Cold Spring.
 
 ---
