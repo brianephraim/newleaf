@@ -114,6 +114,8 @@ const rulesText = `
 
 Welcome to the New Leaf Restoration Garden. Please read carefully the following information and rules, which have been designed to ensure that the garden is a safe, pleasant, and inviting place. Thank you!
 
+1. Plot lease is limited to one per household and members must be Philipstown residents for this initial offering.
+
 1. Garden plots are 10’ x 4.’ Cost for the 2021 season is $100 per plot.
 
 1. The garden is open from dawn to dusk, seven days a week, from date on which the garden opens for the season (TBD) through to Thanksgiving.

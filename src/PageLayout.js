@@ -159,12 +159,11 @@ const PageLayout = ({classes,children}) => (
       <SEO title="New Leaf Restoration"/>
       <div className={classes.headerLogoWrap}>
         <div className={classes.headerImages}>
-          <img src={'/images/newleaf-logo.png'} className={classes.headerBadgeLogo} />
+          <img src={'/images/newleaf-logo.png?v=2'} className={classes.headerBadgeLogo} />
           <div className={classes.headerLogoSpacer} />
           <img src={'/images/headerlogo.png'} className={classes.headerTextLogo} />
         </div>
         <p className={classes.headerText}>Philipstown Community Gardens</p>
-        <p className={classes.headerText}>Garrison, NY</p>
       </div>
       <img src={'/images/widePhoto.jpg'} className={classes.hero} />
       {children}
