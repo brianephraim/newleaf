@@ -70,7 +70,7 @@ function getStripePromise(env){
 }
 
 
-const DonateButton_notConnected = ({classes,amount,stripeId,active = true,inactiveMessage, className, classNameInactive, prefix = '$'}) => {
+const DonateButton_notConnected = ({classes,amount,stripeId,active = true,inactiveMessage, className, classNameInactive, prefix = '$', successUrlSuffix = 'success'}) => {
   const isDev = window.location.search.includes('env=dev');
   const env = isDev ? 'dev' : 'prod';
   getStripePromise(env);
@@ -91,7 +91,7 @@ const DonateButton_notConnected = ({classes,amount,stripeId,active = true,inacti
           quantity: 1,
         }],
         mode: 'payment',
-        successUrl: `${urlPrefix}/success`,
+        successUrl: `${urlPrefix}/${successUrlSuffix}`,
         cancelUrl: `${urlPrefix}/cancel`,
       });
       console.log('error',error);

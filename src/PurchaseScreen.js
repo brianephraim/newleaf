@@ -210,6 +210,16 @@ class PurchaseScreen extends Component {
     const isDev = window.location.search.includes('env=dev');
     const env = isDev ? 'dev' : 'prod';
     const plotPurchase = stripePrices[env].purchase[0];
+    // return (
+    //   <PageLayout>
+    //     <div className={classes.container}>
+    //       <p>
+    //         In order to access a plot, please email info@newleaf-restoration.org.
+    //       </p>
+    //       <a href="/" className={classes.homepageLink}>Go back to the homepage</a>
+    //     </div>
+    //   </PageLayout>
+    // );
     return (
       <PageLayout>
         <div className={classes.container}>

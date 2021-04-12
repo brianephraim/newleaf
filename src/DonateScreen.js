@@ -137,7 +137,7 @@ class DonateScreen extends Component {
                             key={stripeId}
                             amount={amount}
                             stripeId={stripeId}
-
+                            successUrlSuffix="donatesuccess"
                           />
                         );
                       })

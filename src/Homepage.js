@@ -153,9 +153,20 @@ const styles={
   purchaseLinkWrap: {
     display: 'flex',
     justifyContent: 'center',
+    flexDirection: 'column',
+    backgroundColor: '#404040',
+    margin: 20,
+    padding:20,
+  },
+  sharedAPlotText: {
+    fontFamily: bodyFontName,
+    color: '#fff',
+    textAlign: 'center',
+    '& strong': {
+      fontSize:23,
+    },
   },
   purchaseLink: {
-    display: 'flex',
     alignSelf: 'center',
     fontFamily: 'Sansita One',
     fontSize: 30,
@@ -168,6 +179,7 @@ const styles={
     borderWidth: 12,
     borderStyle: 'solid',
     textAlign: 'center',
+    lineHeight: '40px',
     ...purchaseLink,
 
     '&:hover': {
@@ -180,138 +192,212 @@ const styles={
     '&:active': {
       ...purchaseLink
     },
+    '&:any-link': {
+      ...purchaseLink
+    },
   },
+  underline: {
+    textDecoration:'underline !important',
+  },
+  donateLinkWrap: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    backgroundColor: '#404040',
+    margin: 20,
+    padding:20,
+  },
+  donateText: {
+    fontFamily: bodyFontName,
+    color: '#fff',
+    textAlign: 'center',
+    '& strong': {
+      fontSize:23,
+    },
+  },
+  donateLink: {
+    alignSelf: 'center',
+    fontFamily: 'Sansita One',
+    fontSize: 18,
+    paddingTop: 6,
+    paddingBottom: 6,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderRadius: 4,
+    borderColor: '#216939',
+    borderWidth: 4,
+    borderStyle: 'solid',
+    textAlign: 'center',
+    lineHeight: '40px',
+    ...purchaseLink,
+
+    '&:hover': {
+      ...purchaseLink,
+      opacity: .9,
+    },
+    '&:visited': {
+      ...purchaseLink
+    },
+    '&:active': {
+      ...purchaseLink
+    },
+    '&:any-link': {
+      ...purchaseLink
+    },
+  },
+
 
 };
 
 
-const Homepage = ({classes}) => (
-  <PageLayout>
+const Homepage = ({classes}) => {
+  const purchaseStuff = (
+    <div className={classes.purchaseLinkWrap}>
+      {<a href="/purchase" className={classes.purchaseLink}>Click here to LEASE A GARDEN PLOT for $100</a>}
+      <p className={classes.sharedAPlotText}>Plots are limited.  Get one now!</p>
+      <p className={classes.sharedAPlotText}>If you and a friend want to split a garden plot for <strong>$50</strong> each, no problem!<br /> Just lease a full plot yourself and get your friend to pay you back for their share of it.  Then email us with the friend's name and contact info at info@newleaf-restoration.org so we can get their agreement to the garden rules.</p>
+      <p className={classes.sharedAPlotText}>Garden plots can also be leased at a discount for those with limited financial resources - just email us at info@newleaf-restoration.org.</p>
 
-    <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
-      <div className={classes.purchaseLinkWrap}>
-        <a href="/purchase" className={classes.purchaseLink}>Click here to LEASE A GARDEN PLOT</a>
-      </div>
-      <div className={classes.columns}>
-        <div className={classes.column}>
-          <Info
-            copy="intro"
-          />
-          <Thumbnail
-            src="/images/tomatos.jpg"
-            href="/images/tomatos.jpg"
-            openInNewTab
-          />
-          <Info copy="vision" />
-          <Affiliates />
-          <Info copy="gardenAspects" />
-          <Thumbnail
-            src="/images/flowers1.jpg"
-            href="/images/flowers1.jpg"
-            openInNewTab
-          />
-          <Info
-            copy="eradication"
-          />
-          <Thumbnail
-            src="/images/veggies2.jpg"
-            href="/images/veggies2.jpg"
-            openInNewTab
-          />
-          <Info>
-            <SubscribeForm />
-          </Info>
-          <Info copy="email" className="loud" noUnderline />
-          <Thumbnail
-            src="/images/flowers2.jpg"
-            href="/images/flowers2.jpg"
-            openInNewTab
-          />
-        </div>
-        <div className={classes.column}>
-          <Thumbnail
-            headline="Location in Garrison"
-            src="/images/gardenLocation.jpg"
-            href="/images/gardenLocation.jpg"
-            openInNewTab
-          />
-          <Info copy="mission" />
-          <Thumbnail
-            src="/images/veggies1.jpg"
-            href="/images/veggies1.jpg"
-            openInNewTab
-          />
-          <Info
-            copy="council"
-          />
-          <Thumbnail
-            src="/images/group-masked.jpg"
-            href="/images/group-unmasked.jpg"
-            openInNewTab
-          />
-        </div>
-      </div>
+      {false && <a href="mailto:info@newleaf-restoration.org" targe="_blank" className={classes.purchaseLink}>GARDEN PLOTS ARE AVAILABLE! {'\u00a0'}{'\u00a0'}Email{'\u00a0'}<span className={classes.underline}>info@newleaf-restoration.org</span>{'\u00a0'}to gain access.</a>}
     </div>
+  );
 
+  const donateStuff = (
+    <div className={classes.donateLinkWrap}>
+      <p className={classes.donateText}>or</p>
+      {<a href="/donate" className={classes.donateLink}>Donate to New Leaf Restoration (click here to donate)</a>}
+      <p className={classes.donateText}>New Leaf Restoration is a 501(c)(3) Non-profit Organization</p>
+      <p className={classes.donateText}>Donation funds contribute to garden fencing, irrigation systems, and other garden expenses.  Donation funds also help sunbsidize the plots for gardeners who have limited financial resources.</p>
+      <p className={classes.donateText}>A donation does not lease you a plot in the garden.  If you intend to lease a plot, find the button that says "Click here to LEASE A GARDEN PLOT for $100" above.</p>
+    </div>
+  );
+  return (
+    <PageLayout>
 
-    <div className={[classes.afterHero,classes.hideWhenWide].join(' ')}>
-      <div className={classes.purchaseLinkWrap}>
-        <a href="/purchase" className={classes.purchaseLink}>Click here to LEASE A GARDEN PLOT</a>
-      </div>
-      <div className={classes.columns}>
-        <div className={classes.column}>
-          <Info
-            copy="intro"
-          />
-          <Thumbnail
-            headline="Location in Garrison"
-            src="/images/gardenLocation.jpg"
-            href="/images/gardenLocation.jpg"
-            openInNewTab
-          />
-          <Info copy="vision" />
-          <Affiliates />
-          <Info copy="mission" />
-          <Thumbnail
-            src="/images/flowers1.jpg"
-            href="/images/flowers1.jpg"
-            openInNewTab
-          />
-          <Info copy="gardenAspects" />
-          <Thumbnail
-            src="/images/flowers2.jpg"
-            href="/images/flowers2.jpg"
-            openInNewTab
-          />
-          <Info
-            copy="eradication"
-          />
-          <Thumbnail
-            src="/images/veggies1.jpg"
-            href="/images/veggies1.jpg"
-            openInNewTab
-          />
-          <Info
-            copy="council"
-          />
-          <Thumbnail
-            src="/images/group-masked.jpg"
-            href="/images/group-unmasked.jpg"
-            openInNewTab
-          />
-          <Info>
-            <SubscribeForm />
-          </Info>
-          <Info copy="email" className="loud"/>
-          <Thumbnail
-            src="/images/tomatos.jpg"
-            href="/images/tomatos.jpg"
-            openInNewTab
-          />
+      <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
+
+        {purchaseStuff}
+        {donateStuff}
+        <div className={classes.columns}>
+          <div className={classes.column}>
+            <Info
+              copy="intro"
+            />
+            <Thumbnail
+              src="/images/tomatos.jpg"
+              href="/images/tomatos.jpg"
+              openInNewTab
+            />
+            <Info copy="vision" />
+            <Affiliates />
+            <Info copy="gardenAspects" />
+            <Thumbnail
+              src="/images/flowers1.jpg"
+              href="/images/flowers1.jpg"
+              openInNewTab
+            />
+            <Info
+              copy="eradication"
+            />
+            <Thumbnail
+              src="/images/veggies2.jpg"
+              href="/images/veggies2.jpg"
+              openInNewTab
+            />
+            <Info>
+              <SubscribeForm />
+            </Info>
+            <Info copy="email" className="loud" noUnderline />
+            <Thumbnail
+              src="/images/flowers2.jpg"
+              href="/images/flowers2.jpg"
+              openInNewTab
+            />
+          </div>
+          <div className={classes.column}>
+            <Thumbnail
+              headline="Location in Garrison"
+              src="/images/gardenLocation.jpg"
+              href="/images/gardenLocation.jpg"
+              openInNewTab
+            />
+            <Info copy="mission" />
+            <Thumbnail
+              src="/images/veggies1.jpg"
+              href="/images/veggies1.jpg"
+              openInNewTab
+            />
+            <Info
+              copy="council"
+            />
+            <Thumbnail
+              src="/images/group-masked.jpg"
+              href="/images/group-unmasked.jpg"
+              openInNewTab
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </PageLayout>
-)
+
+
+      <div className={[classes.afterHero,classes.hideWhenWide].join(' ')}>
+        {purchaseStuff}
+        {donateStuff}
+        <div className={classes.columns}>
+          <div className={classes.column}>
+            <Info
+              copy="intro"
+            />
+            <Thumbnail
+              headline="Location in Garrison"
+              src="/images/gardenLocation.jpg"
+              href="/images/gardenLocation.jpg"
+              openInNewTab
+            />
+            <Info copy="vision" />
+            <Affiliates />
+            <Info copy="mission" />
+            <Thumbnail
+              src="/images/flowers1.jpg"
+              href="/images/flowers1.jpg"
+              openInNewTab
+            />
+            <Info copy="gardenAspects" />
+            <Thumbnail
+              src="/images/flowers2.jpg"
+              href="/images/flowers2.jpg"
+              openInNewTab
+            />
+            <Info
+              copy="eradication"
+            />
+            <Thumbnail
+              src="/images/veggies1.jpg"
+              href="/images/veggies1.jpg"
+              openInNewTab
+            />
+            <Info
+              copy="council"
+            />
+            <Thumbnail
+              src="/images/group-masked.jpg"
+              href="/images/group-unmasked.jpg"
+              openInNewTab
+            />
+            <Info>
+              <SubscribeForm />
+            </Info>
+            <Info copy="email" className="loud"/>
+            <Thumbnail
+              src="/images/tomatos.jpg"
+              href="/images/tomatos.jpg"
+              openInNewTab
+            />
+          </div>
+        </div>
+      </div>
+    </PageLayout>
+  );
+}
 
 export default injectSheet(styles)(Homepage)
