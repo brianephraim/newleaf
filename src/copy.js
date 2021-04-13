@@ -6,7 +6,7 @@ body: `Contact **New Leaf Restoration** by email at${'  '}
 },
 intro: {
 header: 'The Site',
-body: `In 1984 this verdant pasture, long a source of feed and water for livestock was protected for conservation by the Osborn family. In 2017 the entire 10.8 acres were [donated to the Town of Philipstown by OSI and Scenic Hudson](https://www.openspaceinstitute.org/news/the-open-space-institute-scenic-hudson-donate-land-for-new-philipstown-park). Framed by trails to Sugarloaf and Castle Rock, its uncultivated but loamy earth is bathed in full sun from April to harvest.
+body: `In 1984 this verdant pasture, long a source of feed and water for livestock, was protected for conservation by the Osborn family. In 2017 the entire 10.8 acres were [donated to the Town of Philipstown by OSI and Scenic Hudson](https://www.openspaceinstitute.org/news/the-open-space-institute-scenic-hudson-donate-land-for-new-philipstown-park). Framed by trails to Sugarloaf and Castle Rock, its uncultivated but loamy earth is bathed in full sun from April to harvest.
 
 Approved for town-wide community gardens, this uncommon pasture combines agricultural elements rarely found together on the same site. Quenched by an abundant artesian spring and the Arden Brook to the east, the site has all the prerequisites for thriving habitat, productive, varied and successful community agriculture. `,
 },
@@ -24,11 +24,12 @@ Charter partnerships include the Cornell Cooperative Extension of Putnam County,
 gardenAspects: {
 header: `Garden Features`,
 body: `Below are some of the ideas we are exploring for the community garden
-- Irrigated, modular plot gardens
-- Perennial exchange garden and meandering walk along the brook
-- Netted community berry garden
-- Educational programming for garden enthusiasts of all ages
-- Separate garden for teens`,
+- Town-wide community garden
+- Modular, fenced garden plots
+- Solar-powered drip irrigation
+- Permaculture practices implementation
+- Pollinator-friendly garden and meandering walk along the brook
+- Community berry garden`,
 },
 
 // --

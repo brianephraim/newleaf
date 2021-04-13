@@ -264,10 +264,9 @@ const Homepage = ({classes}) => {
 
   const donateStuff = (
     <div className={classes.donateLinkWrap}>
-      <p className={classes.donateText}>or</p>
       {<a href="/donate" className={classes.donateLink}>Donate to New Leaf Restoration (click here to donate)</a>}
-      <p className={classes.donateText}>New Leaf Restoration is a 501(c)(3) Non-profit Organization</p>
-      <p className={classes.donateText}>Donation funds contribute to garden fencing, irrigation systems, and other garden expenses.  Donation funds also help sunbsidize the plots for gardeners who have limited financial resources.</p>
+      <p className={classes.donateText}>New Leaf Restoration is a 501(c)(3) nonprofit organization</p>
+      <p className={classes.donateText}>Donations help support garden maintenance and operations, including irrigation systems and fencing. Donations also help subsidize plots for gardeners with limited financial resources.</p>
       <p className={classes.donateText}>A donation does not lease you a plot in the garden.  If you intend to lease a plot, find the button that says "Click here to LEASE A GARDEN PLOT for $100" above.</p>
     </div>
   );
