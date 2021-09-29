@@ -249,6 +249,15 @@ const styles={
 
 };
 
+function pad(num, size) {
+    num = num.toString();
+    while (num.length < size) num = "0" + num;
+    return num;
+}
+
+function isEven(value) {
+    return !(value % 2)
+}
 
 const Homepage = ({classes}) => {
   const purchaseStuff = (
@@ -270,6 +279,39 @@ const Homepage = ({classes}) => {
       <p className={classes.donateText}>A donation does not lease you a plot in the garden.  If you intend to lease a plot, find the button that says "Click here to LEASE A GARDEN PLOT for $100" above.</p>
     </div>
   );
+
+  const picsJsxEven = [];
+  const picsJsxOdd = [];
+  const picsJsxBoth = [];
+  let pI = 0;
+  while (pI++ <= 30) {
+    const nextPath = `/images/pic${pad(pI,3)}.jpg`
+    if (isEven(pI)) {
+      console.log('a')
+      picsJsxEven.push(<Thumbnail
+        key={nextPath}
+        src={nextPath}
+        href={nextPath}
+        openInNewTab
+      />)
+    } else {
+      picsJsxOdd.push(<Thumbnail
+        key={nextPath}
+        src={nextPath}
+        href={nextPath}
+        openInNewTab
+      />)
+      console.log('b')
+    }
+    picsJsxBoth.push(<Thumbnail
+      key={nextPath}
+      src={nextPath}
+      href={nextPath}
+      openInNewTab
+    />)
+
+  }
+
   return (
     <PageLayout>
 
@@ -312,6 +354,8 @@ const Homepage = ({classes}) => {
               href="/images/flowers2.jpg"
               openInNewTab
             />
+            {picsJsxEven}
+
           </div>
           <div className={classes.column}>
             <Thumbnail
@@ -334,7 +378,9 @@ const Homepage = ({classes}) => {
               href="/images/group-unmasked.jpg"
               openInNewTab
             />
+            {picsJsxOdd}
           </div>
+
         </div>
       </div>
 
@@ -392,6 +438,7 @@ const Homepage = ({classes}) => {
               href="/images/tomatos.jpg"
               openInNewTab
             />
+            {picsJsxBoth}
           </div>
         </div>
       </div>
