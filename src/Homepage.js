@@ -276,7 +276,7 @@ const Homepage = ({classes}) => {
       {<a href="/donate" className={classes.donateLink}>Donate to New Leaf Restoration (click here to donate)</a>}
       <p className={classes.donateText}>New Leaf Restoration is a 501(c)(3) nonprofit organization</p>
       <p className={classes.donateText}>Donations help support garden maintenance and operations, including irrigation systems and fencing. Donations also help subsidize plots for gardeners with limited financial resources.</p>
-      <p className={classes.donateText}>A donation does not lease you a plot in the garden.  If you intend to lease a plot, find the button that says "Click here to LEASE A GARDEN PLOT for $100" above.</p>
+      <p className={classes.donateText}>A donation does not lease you a plot in the garden.  {/* If you intend to lease a plot, find the button that says "Click here to LEASE A GARDEN PLOT for $100" above. */}</p>
     </div>
   );
 
@@ -284,8 +284,8 @@ const Homepage = ({classes}) => {
   const picsJsxOdd = [];
   const picsJsxBoth = [];
   let pI = 0;
-  while (pI++ <= 30) {
-    const nextPath = `/images/pic${pad(pI,3)}.jpg`
+  while (pI++ <= (22 -1)) {
+    const nextPath = `/images/pic${pad(pI,3)}.jpg` + "?101421=qwer"
     if (isEven(pI)) {
       console.log('a')
       picsJsxEven.push(<Thumbnail
@@ -317,13 +317,14 @@ const Homepage = ({classes}) => {
 
       <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
 
-        {purchaseStuff}
-        {donateStuff}
+        {/* purchaseStuff */}
+
         <div className={classes.columns}>
           <div className={classes.column}>
             <Info
               copy="intro"
             />
+            {donateStuff}
             <Thumbnail
               src="/images/tomatos.jpg"
               href="/images/tomatos.jpg"
@@ -386,13 +387,14 @@ const Homepage = ({classes}) => {
 
 
       <div className={[classes.afterHero,classes.hideWhenWide].join(' ')}>
-        {purchaseStuff}
-        {donateStuff}
+        {/* purchaseStuff */}
+
         <div className={classes.columns}>
           <div className={classes.column}>
             <Info
               copy="intro"
             />
+            {donateStuff}
             <Thumbnail
               headline="Location in Garrison"
               src="/images/gardenLocation.jpg"

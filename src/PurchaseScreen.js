@@ -242,7 +242,8 @@ class PurchaseScreen extends Component {
                   showAll
                 >{rulesText}</Markdown>
                 <div className={classes.checkboxSection}>
-                  <p>
+                  <p>The leasing period has ended.  Please try again in 2022.</p>
+                  {/* <p>
                     By checking the box below and completing the purchase, you agree to the above rules and regulations and understand that New Leaf Restoration, Inc. is not responsible for your actions. You hereby relinquish New Leaf Restoration, Inc. from any liability, damage, loss, or claim that occurs in connection with the use of the garden by me or any of my guests, as you are solely responsible for your plot.
                   </p>
                   <div className={classes.checkboxArea}>
@@ -262,7 +263,7 @@ class PurchaseScreen extends Component {
                       className={classes.purchaseButton}
                       classNameInactive={classes.purchaseButtonInactive}
                     />
-                  </div>
+                  </div> */}
                 </div>
 
               </div>
