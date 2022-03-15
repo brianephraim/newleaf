@@ -166,6 +166,17 @@ const styles={
       fontSize:23,
     },
   },
+  purchase2022Text: {
+    fontFamily: bodyFontName,
+    color: '#fff',
+    textAlign: 'left',
+    '& strong': {
+      fontSize:23,
+    },
+    '& a': {
+      color: `${linkColor} !important`,
+    },
+  },
   purchaseLink: {
     alignSelf: 'center',
     fontFamily: 'Sansita One',
@@ -271,6 +282,18 @@ const Homepage = ({classes}) => {
     </div>
   );
 
+  const purchaseStuff2022 = (
+    <div className={classes.purchaseLinkWrap}>
+      <p className={classes.purchase2022Text}>Dear gardening friends,</p>
+      <p className={classes.purchase2022Text}>With the official start of spring only weeks away, we imagine you are as excited and hopeful as we are about another gardening season! If you have already reached out to us to lease a garden plot this year, thank you very much!</p>
+      <p className={classes.purchase2022Text}><strong>We are happy to let you know that we are planning to open the garden on Saturday, April 23,</strong> and we would like to invite you to participate. <strong>Cost for each 4' x 16' garden plot is $100, payable by check or Venmo.</strong> Checks should be made payable to New Leaf Restoration, Inc. and mailed to Lori Moss, 333 Route 301, Cold Spring, NY 10516. Venmo payments may be made <strong>@lorimoss</strong>. </p>
+      <p className={classes.purchase2022Text}>Our efforts in March and early April will be devoted to getting ready for the season. If you lease a plot, we will be in touch with you when we schedule garden preparation dates.</p>
+      <p className={classes.purchase2022Text}>Please feel free to spread the word about the garden to anyone you know who you think might be interested in leasing a plot for the season! And, as always, should you have any questions, please do not hesitate to email us at <a href="mailto:info@newleaf-restoration.org" targe="_blank" className={classes.asdf}>info@newleaf-restoration.org</a>. Hope to see you in the garden!</p>
+      <p className={classes.purchase2022Text}>Sincerely,</p>
+      <p className={classes.purchase2022Text}>The New Leaf Restoration Board</p>
+    </div>
+  );
+
   const donateStuff = (
     <div className={classes.donateLinkWrap}>
       {<a href="/donate" className={classes.donateLink}>Donate to New Leaf Restoration (click here to donate)</a>}
@@ -316,7 +339,7 @@ const Homepage = ({classes}) => {
     <PageLayout>
 
       <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
-
+        {purchaseStuff2022}
         {/* purchaseStuff */}
 
         <div className={classes.columns}>
@@ -387,6 +410,7 @@ const Homepage = ({classes}) => {
 
 
       <div className={[classes.afterHero,classes.hideWhenWide].join(' ')}>
+        {purchaseStuff2022}
         {/* purchaseStuff */}
 
         <div className={classes.columns}>
