@@ -274,9 +274,13 @@ const Homepage = ({classes}) => {
   const purchaseStuff = (
     <div className={classes.purchaseLinkWrap}>
       {<a href="/purchase" className={classes.purchaseLink}>Click here to LEASE A GARDEN PLOT for $100</a>}
-      <p className={classes.sharedAPlotText}>Plots are limited.  Get one now!</p>
-      <p className={classes.sharedAPlotText}>If you and a friend want to split a garden plot for <strong>$50</strong> each, no problem!<br /> Just lease a full plot yourself and get your friend to pay you back for their share of it.  Then email us with the friend's name and contact info at info@newleaf-restoration.org so we can get their agreement to the garden rules.</p>
-      <p className={classes.sharedAPlotText}>Garden plots can also be leased at a discount for those with limited financial resources - just email us at info@newleaf-restoration.org.</p>
+      <p className={classes.purchase2022Text}>With the official start of spring only weeks away, we imagine you are as excited and hopeful as we are about another gardening season! If you have already reached out to us to lease a garden plot this year, thank you very much!</p>
+      <p className={classes.purchase2022Text}><strong>We are happy to let you know that we are planning to open the garden on Saturday, April 23,</strong> and we would like to invite you to participate. <strong>Cost for each 4' x 16' garden plot is $100.</strong></p>
+      <p className={classes.purchase2022Text}>Our efforts in March and early April will be devoted to getting ready for the season. If you lease a plot, we will be in touch with you when we schedule garden preparation dates.</p>
+      <p className={classes.purchase2022Text}>Please feel free to spread the word about the garden to anyone you know who you think might be interested in leasing a plot for the season! And, as always, should you have any questions, please do not hesitate to email us at <a href="mailto:info@newleaf-restoration.org" targe="_blank" className={classes.asdf}>info@newleaf-restoration.org</a>. Hope to see you in the garden!</p>
+      <p className={classes.purchase2022Text}>Plots are limited.  Get one now!</p>
+      <p className={classes.purchase2022Text}>If you and a friend want to split a garden plot for <strong>$50</strong> each, no problem!<br /> Just lease a full plot yourself and get your friend to pay you back for their share of it.  Then email us with the friend's name and contact info at <a href="mailto:info@newleaf-restoration.org" targe="_blank" className={classes.asdf}>info@newleaf-restoration.org</a> so we can get their agreement to the garden rules.</p>
+      <p className={classes.purchase2022Text}>Garden plots can also be leased at a discount for those with limited financial resources - just email us at info@newleaf-restoration.org.</p>
 
       {false && <a href="mailto:info@newleaf-restoration.org" targe="_blank" className={classes.purchaseLink}>GARDEN PLOTS ARE AVAILABLE! {'\u00a0'}{'\u00a0'}Email{'\u00a0'}<span className={classes.underline}>info@newleaf-restoration.org</span>{'\u00a0'}to gain access.</a>}
     </div>
@@ -339,8 +343,8 @@ const Homepage = ({classes}) => {
     <PageLayout>
 
       <div className={[classes.afterHero,classes.hideWhenNarrow].join(' ')}>
-        {purchaseStuff2022}
-        {/* purchaseStuff */}
+        {purchaseStuff}
+        {/* purchaseStuff2022 */}
 
         <div className={classes.columns}>
           <div className={classes.column}>
@@ -410,8 +414,8 @@ const Homepage = ({classes}) => {
 
 
       <div className={[classes.afterHero,classes.hideWhenWide].join(' ')}>
-        {purchaseStuff2022}
-        {/* purchaseStuff */}
+        {purchaseStuff}
+        {/* purchaseStuff2022 */}
 
         <div className={classes.columns}>
           <div className={classes.column}>

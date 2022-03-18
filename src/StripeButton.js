@@ -64,6 +64,7 @@ const stripePromises = {
 };
 
 function getStripePromise(env){
+  console.log('ENV',env);
   const stripePromise = stripePromises[env] || loadStripe(stripeKeys[env]);
   stripePromises[env] = stripePromise;
   return stripePromise;
