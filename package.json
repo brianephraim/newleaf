@@ -7,7 +7,7 @@
   "dependencies": {
     "@stripe/stripe-js": "^1.11.0",
     "fs-extra": "^8.1.0",
-    "gatsby": "^2.15.29",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.2.24",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-jss": "^2.1.9",
